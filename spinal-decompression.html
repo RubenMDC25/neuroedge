@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Spinal Decompression | NeuroEdge Chiropractic - Murrieta, CA</title>
+  
+  <link rel="icon" type="image/png" href="https://www.neuroedgechiropractic.com/assets/favicon.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+  <style>
+    :root {
+      --brand-blue: #235789;
+      --brand-red: #c1292e;
+      --brand-white: #ffffff;
+      --bg: #f9fafb;
+      --surface: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --border: #e2e8f0;
+      --shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 10px 28px rgba(15, 23, 42, 0.12);
+      --gutter: 24px;
+      --maxw: 1200px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: var(--brand-blue);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--brand-red);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--text-secondary);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary {
+      background: var(--brand-blue);
+      color: white;
+      box-shadow: 0 2px 8px rgba(35, 87, 137, 0.15);
+    }
+
+    .btn-primary:hover {
+      background: #1a4166;
+      box-shadow: 0 4px 12px rgba(35, 87, 137, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--brand-white);
+      color: var(--brand-blue);
+      border-color: var(--brand-blue);
+    }
+
+    .btn-secondary:hover {
+      background: #f0f6fc;
+      transform: translateY(-2px);
+    }
+
+    .btn-accent {
+      background: var(--brand-red);
+      color: white;
+      box-shadow: 0 2px 8px rgba(193, 41, 46, 0.15);
+    }
+
+    .btn-accent:hover {
+      background: #a01f24;
+      box-shadow: 0 4px 12px rgba(193, 41, 46, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    #site_header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      gap: 24px;
+      padding: 0 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 64px;
+      width: auto;
+      transition: transform 0.2s ease;
+    }
+
+    #nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      flex: 1;
+      flex-wrap: nowrap;
+    }
+
+    #nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      position: relative;
+      white-space: nowrap;
+    }
+
+    #nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--brand-blue);
+      transition: width 0.3s ease;
+    }
+
+    #nav a:hover::after {
+      width: 100%;
+    }
+
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    @media (max-width: 1024px) {
+      #nav ul {
+        gap: 16px;
+      }
+      #nav a {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-bar {
+        height: 60px;
+        gap: 12px;
+      }
+      #nav ul {
+        display: none;
+      }
+      .header-cta {
+        flex-wrap: wrap;
+      }
+      .header-cta .btn {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+    }
+
+    /* Page Hero */
+    .page-hero {
+      background: linear-gradient(135deg, var(--brand-blue) 0%, #1a4166 100%);
+      padding: 80px var(--gutter);
+      color: white;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 32px;
+    }
+
+    /* Content Section */
+    .content-section {
+      padding: 80px var(--gutter);
+      background: var(--surface);
+    }
+
+    .content-section h2 {
+      color: var(--brand-blue);
+      margin-bottom: 24px;
+    }
+
+    .content-section h3 {
+      color: var(--brand-blue);
+      margin: 32px 0 16px;
+    }
+
+    .content-section p {
+      margin-bottom: 20px;
+    }
+
+    .content-section ul {
+      list-style-position: inside;
+      margin: 16px 0;
+      color: var(--text-secondary);
+    }
+
+    .content-section li {
+      margin-bottom: 8px;
+      line-height: 1.65;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--brand-blue);
+      color: white;
+    }
+
+    .footer-top {
+      padding: 40px var(--gutter);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-top .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-top h2 {
+      color: white;
+      font-size: 24px;
+      margin: 0;
+      flex: 1;
+    }
+
+    .footer-mid {
+      padding: 48px var(--gutter);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+
+    .footer-col.logo-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-col.logo-col img {
+      height: 120px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-col.logo-col img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      line-height: 1.9;
+    }
+
+    .footer-col a {
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding: 24px var(--gutter);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+
+    .footer-bottom .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-top .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-top h2 {
+        font-size: 20px;
+      }
+      .content-section {
+        padding: 60px var(--gutter);
+      }
+      .page-hero {
+        padding: 60px var(--gutter);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header id="site_header">
+  <div class="container">
+    <div class="header-bar">
+      <a href="index.html" class="logo" aria-label="NeuroEdge Chiropractic">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/neuroedge-logo-transparent-3y40nSK6tF8cnzVhFvy2wJtF9RsYcz.png" alt="NeuroEdge Chiropractic">
+      </a>
+
+      <nav id="nav" aria-label="Primary">
+        <ul>
+          <li><a href="about.html">Meet the Doctor</a></li>
+          <li><a href="services.html">How We Help</a></li>
+          <li><a href="patient-forms.html">Patient Forms</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:(951) 304-2242" class="btn btn-secondary">Call (951) 304-2242</a>
+        <a href="index.html#contact" class="btn btn-primary">Schedule</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Spinal Decompression Therapy</h1>
+    <p>Non-surgical relief for disc bulges, herniations, sciatica, and chronic back pain</p>
+    <a href="index.html#contact" class="btn btn-accent">Schedule Consultation</a>
+  </div>
+</section>
+
+<!-- Content -->
+<section class="content-section">
+  <div class="container">
+    <h2>Find Lasting Relief from Back Pain with Spinal Decompression Therapy in Murrieta, CA</h2>
+    
+    <p>Back pain is one of the most common and frustrating conditions people face. It can come from lifting something wrong, sitting too long, or even something as simple as poor posture. In many cases, back pain isn't just about muscle strain—it's caused by pressure on the spine itself. That's where spinal decompression therapy comes in.</p>
+
+    <p>At Neuroedge Chiropractic in Murrieta, CA, we help patients find lasting relief from back pain with non-surgical spinal decompression. It's a gentle, drug-free treatment that addresses the root cause of your discomfort by relieving pressure on spinal discs and nerves. Whether you're dealing with chronic lower back pain, sciatica, or a bulging disc, spinal decompression could be the solution your body needs.</p>
+
+    <h3>What Is Spinal Decompression?</h3>
+    
+    <p>Spinal decompression is a specialized therapy that involves gently stretching the spine to reduce pressure on spinal discs and nerves. It's performed using a motorized table or device that allows your spine to be slowly and safely stretched in a controlled manner.</p>
+
+    <p>When the spine is compressed, discs can become herniated or bulge out of place. This can pinch nearby nerves, causing pain, tingling, numbness, or weakness—not only in the back but also into the hips, legs, and feet.</p>
+
+    <p>Spinal decompression therapy creates space between the vertebrae, allowing:</p>
+    <ul>
+      <li>Bulging or herniated discs to retract</li>
+      <li>Nutrients, oxygen, and fluids to flow back into the discs</li>
+      <li>Pressure to be removed from pinched nerves</li>
+      <li>Tight muscles and joints to release and relax</li>
+    </ul>
+
+    <p>The goal is not just to relieve pain, but to create an environment where the spine can heal naturally.</p>
+
+    <h3>Conditions That Spinal Decompression Can Help</h3>
+    
+    <p>Spinal decompression is especially effective for treating back pain related to:</p>
+    <ul>
+      <li>Herniated or bulging discs</li>
+      <li>Degenerative disc disease</li>
+      <li>Sciatica or nerve compression</li>
+      <li>Chronic lower back pain</li>
+      <li>Spinal stenosis</li>
+      <li>Facet joint syndrome</li>
+      <li>Postural imbalances affecting spinal alignment</li>
+    </ul>
+
+    <p>This therapy is ideal for patients looking to avoid surgery or long-term use of medication. It's non-invasive and completely customizable to your condition, symptoms, and comfort level.</p>
+
+    <h3>How Spinal Decompression Works at Neuroedge Chiropractic</h3>
+    
+    <p>Your first step is a thorough evaluation. We assess your spinal alignment, mobility, nerve function, and any existing imaging (like X-rays or MRIs) to determine if decompression is the right fit for your condition.</p>
+
+    <p>If it is, we'll develop a custom treatment plan based on your pain level, lifestyle, and recovery goals. Sessions usually last 20–30 minutes and are performed in our office under close supervision. During the treatment:</p>
+    <ul>
+      <li>You'll lie on a comfortable decompression table</li>
+      <li>A harness will be placed around your hips</li>
+      <li>The table gently stretches and relaxes your spine in cycles</li>
+    </ul>
+
+    <p>Most patients describe the experience as relieving, relaxing, and even rejuvenating. There's no cracking or twisting—just a slow, rhythmic pull that eases pressure on your spine.</p>
+
+    <p>For best results, spinal decompression is often paired with:</p>
+    <ul>
+      <li>Chiropractic adjustments</li>
+      <li>Softwave Therapy</li>
+      <li>Rehabilitative exercises</li>
+      <li>Postural correction</li>
+      <li>Lifestyle and ergonomic coaching</li>
+    </ul>
+
+    <p>Together, these strategies help ensure the pain doesn't return—and that your spine gets stronger over time.</p>
+
+    <h3>Why It Works: Relieving the Pressure to Heal Naturally</h3>
+    
+    <p>What makes spinal decompression unique is its ability to reverse the pressure that's keeping your back in pain. Many people don't realize that spinal discs rely on movement and pressure changes to stay healthy. When discs are compressed—due to poor posture, injury, or degeneration—they can't receive the nutrients they need to repair themselves.</p>
+
+    <p>By creating negative pressure within the disc, decompression therapy allows healing fluids to re-enter the area, helping to:</p>
+    <ul>
+      <li>Reduce inflammation</li>
+      <li>Rehydrate the disc</li>
+      <li>Improve shock absorption</li>
+      <li>Relieve nerve irritation</li>
+    </ul>
+
+    <p>This not only reduces pain—it helps your spine regain its natural function.</p>
+
+    <h3>Who Is a Good Candidate for Spinal Decompression?</h3>
+    
+    <p>You may be a good candidate if:</p>
+    <ul>
+      <li>You've been diagnosed with a disc bulge, herniation, or degenerative disc disease</li>
+      <li>You've tried rest, medications, or physical therapy without success</li>
+      <li>You experience radiating pain into your legs (sciatica)</li>
+      <li>You want a non-surgical, drug-free solution</li>
+      <li>You're motivated to follow a complete care plan</li>
+    </ul>
+
+    <p>While spinal decompression is safe for most people, it's not suitable for everyone. Conditions like severe osteoporosis, spinal fractures, or certain post-surgical cases may require different treatment options. That's why we always begin with a full assessment to ensure this is the best fit for your needs.</p>
+
+    <h3>Your Path to a Healthier Spine Starts Here</h3>
+    
+    <p>If you've been living with back pain that limits your movement, affects your sleep, or keeps you from doing the things you love, it's time to explore a solution that works with your body—not against it.</p>
+
+    <p>At Neuroedge Chiropractic in Murrieta, CA, our spinal decompression therapy is part of a personalized plan designed to treat the cause of your pain and support your long-term recovery. You don't have to choose between surgery and suffering—there's another way.</p>
+
+    <div style="margin-top: 48px; text-align: center;">
+      <a href="index.html#contact" class="btn btn-primary" style="padding: 14px 28px; font-size: 16px;">Call or Schedule Your Visit Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <h2>Experience Health & Healing Today!</h2>
+      <a class="btn btn-accent" href="index.html#contact">Request an Appointment</a>
+    </div>
+  </div>
+
+  <div class="footer-mid">
+    <div class="footer-grid">
+      <div class="footer-col logo-col">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/neuroedge-logo-transparent-3y40nSK6tF8cnzVhFvy2wJtF9RsYcz.png" alt="NeuroEdge Chiropractic Logo">
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>25032 Las Brisas Rd #A, Murrieta, CA 92562</li>
+          <li><a href="mailto:hello@neuroedgechiropractic.com">hello@neuroedgechiropractic.com</a></li>
+          <li><a href="tel:(951) 304-2242">(951) 304-2242</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon · 8–12, 2–6</li>
+          <li>Tue · 8–12, 2–5</li>
+          <li>Wed · 8–12, 2–6</li>
+          <li>Thu · 8–12, 2–6</li>
+          <li>Fri · Closed</li>
+          <li>Sat · Closed</li>
+          <li>Sun · Closed</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Meet the Doctor</a></li>
+          <li><a href="index.html#contact">Appointment Request</a></li>
+          <li><a href="services.html">How We Help</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="location.html">Location</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div>© 2025 NeuroEdge Chiropractic. All rights reserved. <a href="#">Privacy Policy</a></div>
+      <div>Website by <a href="https://rmdigitaldesigns.com" target="_blank" rel="noopener">R&M Digital Designs</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
