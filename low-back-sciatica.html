@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Headaches & Migraines Treatment | NeuroEdge Chiropractic Murrieta, CA</title>
+  
+  <meta property="og:title" content="Headaches & Migraines Treatment — NeuroEdge Chiropractic" />
+  <link rel="icon" type="image/png" href="https://www.neuroedgechiropractic.com/assets/favicon.png"/>
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Normalize -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+  <style>
+    :root {
+      /* Brand Palette */
+      --brand-blue: #235789;
+      --brand-red: #c1292e;
+      --brand-white: #ffffff;
+      
+      /* Neutrals */
+      --bg: #f9fafb;
+      --surface: #ffffff;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --border: #e2e8f0;
+      --shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 10px 28px rgba(15, 23, 42, 0.12);
+      
+      /* Spacing */
+      --gutter: 24px;
+      --maxw: 1200px;
+      
+      /* Border Radius */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: var(--brand-blue);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--brand-red);
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800;
+    }
+
+    h3 {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--text-secondary);
+      line-height: 1.65;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    /* Layout */
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--brand-blue);
+      color: white;
+      box-shadow: 0 2px 8px rgba(35, 87, 137, 0.15);
+    }
+
+    .btn-primary:hover {
+      background: #1a4166;
+      box-shadow: 0 4px 12px rgba(35, 87, 137, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--brand-white);
+      color: var(--brand-blue);
+      border-color: var(--brand-blue);
+    }
+
+    .btn-secondary:hover {
+      background: #f0f6fc;
+      transform: translateY(-2px);
+    }
+
+    .btn-accent {
+      background: var(--brand-red);
+      color: white;
+      box-shadow: 0 2px 8px rgba(193, 41, 46, 0.15);
+    }
+
+    .btn-accent:hover {
+      background: #a01f24;
+      box-shadow: 0 4px 12px rgba(193, 41, 46, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* ============ HEADER ============ */
+    #site_header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      gap: 24px;
+      padding: 0 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 64px;
+      width: auto;
+      transition: transform 0.2s ease;
+    }
+
+    #nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      flex: 1;
+      flex-wrap: nowrap;
+    }
+
+    #nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      position: relative;
+      white-space: nowrap;
+    }
+
+    #nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--brand-blue);
+      transition: width 0.3s ease;
+    }
+
+    #nav a:hover::after {
+      width: 100%;
+    }
+
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    @media (max-width: 1024px) {
+      #nav ul {
+        gap: 16px;
+      }
+      #nav a {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-bar {
+        height: 60px;
+        gap: 12px;
+      }
+      #nav ul {
+        display: none;
+      }
+      .header-cta {
+        flex-wrap: wrap;
+      }
+    }
+
+    /* ============ PAGE HERO ============ */
+    .page-hero {
+      background: linear-gradient(135deg, var(--brand-blue) 0%, #1a4166 100%);
+      padding: 80px var(--gutter);
+      text-align: center;
+      color: white;
+    }
+
+    .page-hero h1 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .page-hero p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 24px;
+    }
+
+    /* ============ CONTENT SECTION ============ */
+    .content-section {
+      padding: 80px var(--gutter);
+      background: var(--surface);
+    }
+
+    .content-section .container {
+      max-width: 900px;
+    }
+
+    .content-section h2 {
+      color: var(--brand-blue);
+      margin-bottom: 24px;
+      margin-top: 40px;
+    }
+
+    .content-section h2:first-child {
+      margin-top: 0;
+    }
+
+    .content-section h3 {
+      color: var(--brand-blue);
+      margin-bottom: 16px;
+      margin-top: 32px;
+    }
+
+    .content-section ul, .content-section ol {
+      margin-left: 24px;
+      margin-bottom: 20px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .content-section li {
+      margin-bottom: 8px;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, rgba(35, 87, 137, 0.05), rgba(193, 41, 46, 0.05));
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .cta-box h3 {
+      color: var(--brand-blue);
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      margin-bottom: 24px;
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--brand-blue);
+      color: white;
+    }
+
+    .footer-top {
+      padding: 40px var(--gutter);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-top .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-top h2 {
+      color: white;
+      font-size: 24px;
+      margin: 0;
+      flex: 1;
+    }
+
+    .footer-mid {
+      padding: 48px var(--gutter);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+
+    .footer-col.logo-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-col.logo-col img {
+      height: 120px;
+      width: auto;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      line-height: 1.9;
+    }
+
+    .footer-col a {
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding: 24px var(--gutter);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+
+    .footer-bottom .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .page-hero {
+        padding: 60px var(--gutter);
+      }
+      .content-section {
+        padding: 60px var(--gutter);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="site_header">
+  <div class="container">
+    <div class="header-bar">
+      <a href="index.html" class="logo" aria-label="NeuroEdge Chiropractic">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/neuroedge-logo-transparent-3y40nSK6tF8cnzVhFvy2wJtF9RsYcz.png" alt="NeuroEdge Chiropractic">
+      </a>
+
+      <nav id="nav" aria-label="Primary">
+        <ul>
+          <li><a href="about.html">Meet the Doctor</a></li>
+          <li><a href="services.html">How We Help</a></li>
+          <li><a href="patient-forms.html">Patient Forms</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:(951) 304-2242" class="btn btn-secondary">Call (951) 304-2242</a>
+        <a href="index.html#contact" class="btn btn-primary">Schedule</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Headaches & Migraines</h1>
+    <p>Reduce frequency and intensity by addressing neck mechanics, nerve irritation, and triggers.</p>
+    <a href="index.html#contact" class="btn btn-accent">Schedule a Consultation</a>
+  </div>
+</section>
+
+<!-- ============ CONTENT ============ -->
+<section class="content-section">
+  <div class="container">
+    <h2>Comprehensive Treatment for Headaches and Migraines in Murrieta, CA</h2>
+    <p>Headaches and migraines can be debilitating, affecting your ability to work, enjoy time with family, and live life to the fullest. At NeuroEdge Chiropractic, we understand that not all headaches are the same — and that's why we take a comprehensive, neurologically-focused approach to diagnosis and treatment.</p>
+
+    <h2>Understanding Headaches and Migraines</h2>
+    <p>There are several types of headaches, each with different causes and triggers:</p>
+    <ul>
+      <li><strong>Tension Headaches</strong> – Often caused by muscle tension in the neck and shoulders, poor posture, or stress</li>
+      <li><strong>Cervicogenic Headaches</strong> – Originate from dysfunction in the cervical spine (neck), causing referred pain to the head</li>
+      <li><strong>Migraines</strong> – Neurological condition causing intense, throbbing pain, often accompanied by nausea, light sensitivity, and visual disturbances</li>
+      <li><strong>Cluster Headaches</strong> – Severe headaches that occur in cyclical patterns or clusters</li>
+    </ul>
+
+    <p>Many headaches and migraines have a mechanical or neurological component — meaning they can be triggered or worsened by issues in the spine, nervous system, or muscular imbalances.</p>
+
+    <h2>How We Treat Headaches and Migraines</h2>
+    <p>At NeuroEdge Chiropractic, we don't just mask the pain — we identify and address the root cause. Our approach includes:</p>
+
+    <h3>Comprehensive Evaluation</h3>
+    <p>We perform a thorough examination to identify structural misalignments, nerve irritation, muscle tension, and postural imbalances that may be contributing to your headaches or migraines.</p>
+
+    <h3>Chiropractic Adjustments</h3>
+    <p>Gentle, precise spinal adjustments help restore proper alignment and reduce nerve irritation, particularly in the cervical spine. This can significantly reduce the frequency and intensity of headaches.</p>
+
+    <h3>SoftWave Therapy</h3>
+    <p>For chronic or severe headaches, SoftWave Therapy uses acoustic waves to reduce inflammation, improve blood flow, and promote healing in affected tissues and nerves.</p>
+
+    <h3>Class IV Laser Therapy</h3>
+    <p>High-powered laser therapy helps reduce inflammation and pain in the neck and surrounding tissues, providing fast relief and supporting long-term healing.</p>
+
+    <h3>Postural Correction and Rehabilitation</h3>
+    <p>We provide targeted exercises and ergonomic guidance to correct postural imbalances that contribute to tension headaches and cervicogenic headaches.</p>
+
+    <h3>Trigger Identification and Management</h3>
+    <p>We work with you to identify lifestyle, dietary, or environmental triggers that may be contributing to your migraines or headaches, and provide strategies to manage them.</p>
+
+    <h2>Why Choose NeuroEdge Chiropractic for Headache and Migraine Treatment?</h2>
+    <ul>
+      <li><strong>Neurologically-Focused Care</strong> – We understand the complex relationship between the spine, nervous system, and headache pain</li>
+      <li><strong>Non-Invasive, Drug-Free Solutions</strong> – We focus on natural healing methods that address the root cause, not just symptoms</li>
+      <li><strong>Advanced Technology</strong> – We utilize cutting-edge therapies like SoftWave and Class IV Laser to accelerate healing</li>
+      <li><strong>Personalized Treatment Plans</strong> – Every patient receives a customized plan tailored to their specific condition and goals</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Ready to Find Relief from Headaches and Migraines?</h3>
+      <p>Don't let headaches control your life. Schedule a consultation with Dr. Marty Carlson and discover how our comprehensive approach can help you find lasting relief.</p>
+      <a href="index.html#contact" class="btn btn-primary">Schedule Your Appointment</a>
+    </div>
+
+    <p><a href="index.html">← Back to Home</a></p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <h2>Experience Health & Healing Today!</h2>
+      <a class="btn btn-accent" href="index.html#contact">Request an Appointment</a>
+    </div>
+  </div>
+
+  <div class="footer-mid">
+    <div class="footer-grid">
+      <div class="footer-col logo-col">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/neuroedge-logo-transparent-3y40nSK6tF8cnzVhFvy2wJtF9RsYcz.png" alt="NeuroEdge Chiropractic Logo">
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>25032 Las Brisas Rd #A, Murrieta, CA 92562</li>
+          <li><a href="mailto:hello@neuroedgechiropractic.com">hello@neuroedgechiropractic.com</a></li>
+          <li><a href="tel:(951) 304-2242">(951) 304-2242</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon · 8–12, 2–6</li>
+          <li>Tue · 8–12, 2–5</li>
+          <li>Wed · 8–12, 2–6</li>
+          <li>Thu · 8–12, 2–6</li>
+          <li>Fri · Closed</li>
+          <li>Sat · Closed</li>
+          <li>Sun · Closed</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Meet the Doctor</a></li>
+          <li><a href="index.html#contact">Appointment Request</a></li>
+          <li><a href="services.html">How We Help</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="location.html">Location</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div>© 2025 NeuroEdge Chiropractic. All rights reserved. <a href="#">Privacy Policy</a></div>
+      <div>Website by <a href="https://rmdigitaldesigns.com" target="_blank" rel="noopener">R&M Digital Designs</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
