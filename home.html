@@ -451,6 +451,84 @@
       }
     }
 
+    /* ============ SERVICES ============ */
+    #services {
+      padding: 80px var(--gutter);
+      background: var(--bg);
+    }
+
+    #services .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+
+    #services h2 {
+      color: var(--brand-blue);
+      margin-bottom: 12px;
+    }
+
+    .services-intro p {
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+      font-size: 16px;
+      max-width: 600px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      border-color: var(--brand-blue);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .service-card h4 {
+      color: var(--brand-blue);
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .service-card > div:last-child {
+      margin-top: auto;
+    }
+
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      #services {
+        padding: 60px var(--gutter);
+      }
+    }
+
     /* ============ DOCTOR SECTION ============ */
     #doctor {
       padding: 60px var(--gutter);
@@ -500,81 +578,6 @@
       .doc-grid {
         grid-template-columns: 1fr;
         gap: 24px;
-      }
-    }
-
-    /* ============ SERVICES ============ */
-    #services {
-      padding: 80px var(--gutter);
-      background: var(--bg);
-    }
-
-    #services .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-    }
-
-    #services h2 {
-      color: var(--brand-blue);
-      margin-bottom: 12px;
-    }
-
-    .services-intro p {
-      color: var(--text-secondary);
-      margin-bottom: 40px;
-      font-size: 16px;
-      max-width: 600px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-    }
-
-    .service-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .service-card:hover {
-      border-color: var(--brand-blue);
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-4px);
-    }
-
-    .service-card h4 {
-      color: var(--brand-blue);
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    .service-card p {
-      font-size: 14px;
-      margin-bottom: 14px;
-    }
-
-    @media (max-width: 1024px) {
-      .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      #services {
-        padding: 60px var(--gutter);
       }
     }
 
@@ -846,35 +849,6 @@
       color: white;
     }
 
-    .footer-article {
-      display: grid;
-      grid-template-columns: 60px 1fr;
-      gap: 12px;
-    }
-
-    .footer-article img {
-      width: 60px;
-      height: 60px;
-      border-radius: var(--radius-sm);
-      object-fit: cover;
-    }
-
-    .footer-article-text {
-      font-size: 13px;
-    }
-
-    .footer-article-date {
-      opacity: 0.6;
-      font-size: 12px;
-      margin-bottom: 4px;
-    }
-
-    .footer-article-link {
-      color: white;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
     .footer-bottom {
       padding: 24px var(--gutter);
       border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -918,17 +892,17 @@
 <header id="site_header">
   <div class="container">
     <div class="header-bar">
-      <a href="/" class="logo" aria-label="NeuroEdge Chiropractic">
+      <a href="index.html" class="logo" aria-label="NeuroEdge Chiropractic">
         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/neuroedge-logo-transparent-3y40nSK6tF8cnzVhFvy2wJtF9RsYcz.png" alt="NeuroEdge Chiropractic">
       </a>
 
       <nav id="nav" aria-label="Primary">
         <ul>
-          <li><a href="#about">Meet the Doctor</a></li>
-          <li><a href="#services">How We Help</a></li>
-          <li><a href="#">Patient Forms</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Location</a></li>
+          <li><a href="about.html">Meet the Doctor</a></li>
+          <li><a href="services.html">How We Help</a></li>
+          <li><a href="patient-forms.html">Patient Forms</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="location.html">Location</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -950,8 +924,7 @@
       <div class="container">
         <div class="hero-content">
           <h1>NeuroEdge Chiropractic</h1>
-          <p>"Our number one goal is to provide you with a level of service and commitment to your health that is unparalleled." - Dr. Marty Carlson
-</p>
+          <p>"Our number one goal is to provide you with a level of service and commitment to your health that is unparalleled." - Dr. Marty Carlson</p>
           <div class="hero-cta-group">
             <a href="#contact" class="btn btn-primary">New Patient Appointment</a>
             <a href="tel:(951) 304-2242" class="btn btn-secondary">Call (951) 304-2242</a>
@@ -975,7 +948,7 @@
           <p>Acoustic wave therapy that jump-starts healing for stubborn shoulder, elbow, knee, and plantar fascia pain.</p>
           <div class="hero-cta-group">
             <a href="#contact" class="btn btn-primary">Schedule SoftWave</a>
-            <a href="#services" class="btn btn-secondary">How It Helps</a>
+            <a href="softwave-therapy.html" class="btn btn-secondary">How It Helps</a>
           </div>
         </div>
       </div>
@@ -983,14 +956,14 @@
 
     <!-- Slide 3 -->
     <div class="hero-slide">
-      <div class="hero-slide-bg" style="background-image: url('https://www.neuroedgechiropractic.com/images/laser-thumb.jpg')"></div>
+      <div class="hero-slide-bg" style="background-image: url('https://www.neuroedgechiropractic.com/images/hero-1-desktop.jpg')"></div>
       <div class="container">
         <div class="hero-content">
-          <h1>DIOWAVE Class IV Laser</h1>
-          <p>High-power laser reduces inflammation and pain in minutes — great for disc, nerve irritation, and sports injuries.</p>
+          <h1>Expert Chiropractic Care</h1>
+          <p>Precise adjustments and neurological assessment to restore function, relieve pain, and optimize your body's natural healing ability.</p>
           <div class="hero-cta-group">
-            <a href="#contact" class="btn btn-primary">Explore Laser Therapy</a>
-            <a href="#services" class="btn btn-secondary">Add Laser to My Plan</a>
+            <a href="#contact" class="btn btn-primary">Schedule Your Visit</a>
+            <a href="services.html" class="btn btn-secondary">Our Approach</a>
           </div>
         </div>
       </div>
@@ -1008,24 +981,6 @@
   </div>
 </section>
 
-<!-- ============ DOCTOR SECTION ============ -->
-<section id="doctor">
-  <div class="container">
-    <h2>Meet the Doctor</h2>
-    <div class="doc-grid">
-      <div class="doc-image">
-        <img src="<div class="doc-image"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/doc_61c3b5bf8166e-QmvDr2mVaU6oqn8r18UEwXFoSKb7jT.avif" alt="Dr. Marty Carlson">
-      </div>
-      <div class="doc-bio">
-        <h3>Dr. Marty Carlson</h3>
-        <p>Dr. Carlson has been in practice since 2001 after Graduating from Life West Chiropractic College in Northern California. He has been involved with Chiropractic Neurology for several years. Dr. Carlson is married to his wonderful wife Ana and has three boys Caiden, Cameron and Cooper. Every member of his family enjoys great health due to a healthy lifestyle and chiropractic adjustments.
-</p>My hobbies include soccer, camping, coaching and spending time with my family. I am pleased and honored to treat every person that walks through my door. I love my job and look forward to serving humanity for many years to come. Thank you for being part of the NeuroEdge family.</p>
-        <a href="#" class="btn btn-secondary">Full Bio</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ SERVICES ============ -->
 <section id="services">
   <div class="container">
@@ -1035,34 +990,58 @@
     </div>
     <div class="services-grid">
       <article class="service-card">
-        <h4><a href="#">Spinal Decompression</a></h4>
-        <p>Non-surgical traction for disc bulges/herniations and sciatica to reduce pressure and pain.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+        <h4><a href="softwave-therapy.html">SoftWave® Therapy</a></h4>
+        <p style="margin-bottom: 8px; font-weight: 600; font-size: 13px; color: var(--brand-blue);">Jump-start your body's repair for stubborn pain</p>
+        <p style="margin-bottom: 12px;"><strong>Best for:</strong> Shoulder, knee, plantar fascia, elbow, hip bursitis/tendinitis, chronic strains — plus many spine/nerve issues (disc irritation, sciatica, SI dysfunction, chronic low back).</p>
+        <p style="margin-bottom: 12px;"><strong>Why it works:</strong> Focused acoustic waves boost micro-circulation, modulate inflammation, and help activate local repair cells so tissue can recover.</p>
+        <p style="margin-bottom: 12px;"><strong>You'll feel:</strong> Firm tapping pulses during a 10–15 minute session; intensity stays comfortable. No downtime.</p>
+        <p style="margin-bottom: 16px;"><strong>Timeline:</strong> Acute problems can shift quickly; chronic cases often benefit from a short series (commonly 4–8 visits) for lasting change.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <a href="softwave-therapy.html" class="btn btn-primary" style="font-size: 14px; padding: 8px 14px;">Learn How It Works</a>
+        </div>
       </article>
 
       <article class="service-card">
-        <h4><a href="#">Class IV Laser</a></h4>
-        <p>High-power laser reduces inflammation and speeds tissue repair in minutes.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+        <h4><a href="spinal-decompression.html">Spinal Decompression</a></h4>
+        <p style="margin-bottom: 8px; font-weight: 600; font-size: 13px; color: var(--brand-blue);">Relieve disc pressure, calm nerve pain</p>
+        <p style="margin-bottom: 12px;"><strong>Best for:</strong> Disc bulges/herniations, sciatica/radiculopathy, spinal stenosis, chronic low-back or neck pain after sitting/standing.</p>
+        <p style="margin-bottom: 12px;"><strong>Why it works:</strong> Computer-controlled traction gently unloads the spine, lowering intradiscal pressure to promote hydration and reduce irritation on nearby nerves.</p>
+        <p style="margin-bottom: 12px;"><strong>You'll feel:</strong> A comfortable, cyclical stretch; most sessions run 12–20 minutes with you lying relaxed and strapped in.</p>
+        <p style="margin-bottom: 16px;"><strong>Timeline:</strong> Many patients notice easing within the first few weeks; durable change typically requires a focused series with reassessments to guide progress.</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <a href="spinal-decompression.html" class="btn btn-primary" style="font-size: 14px; padding: 8px 14px;">Is It Right for Me?</a>
+        </div>
       </article>
 
       <article class="service-card">
-        <h4><a href="#">Extremity / Joint Care</a></h4>
-        <p>Shoulders, hips, wrists, ankles — restore motion and cut inflammation.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+        <h4><a href="services.html">Chiropractic Care</a></h4>
+        <p style="margin-bottom: 8px; font-weight: 600; font-size: 13px; color: var(--brand-blue);">Restore motion, reduce pain, move better</p>
+        <p style="margin-bottom: 12px;"><strong>Best for:</strong> Neck and back pain, headaches/migraines, mid-back/rib pain, posture strain, pregnancy-related discomfort, general maintenance/wellness.</p>
+        <p style="margin-bottom: 12px;"><strong>Why it works:</strong> Precise, low-force adjustments restore joint mechanics, which can reduce local inflammation/nerve irritation and improve movement patterns.</p>
+        <p style="margin-bottom: 12px;"><strong>You'll feel:</strong> Techniques tailored to you—traditional hands-on or instrument-assisted, plus mobility and strength work as needed.</p>
+        <p style="margin-bottom: 16px;"><strong>Timeline:</strong> Acute sprains/strains often improve over a few visits; longer-standing issues do best with a staged plan (restore → stabilize → maintain).</p>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <a href="services.html" class="btn btn-primary" style="font-size: 14px; padding: 8px 14px;">What to Expect</a>
+        </div>
       </article>
+    </div>
+  </div>
+</section>
 
-      <article class="service-card">
-        <h4><a href="#">Dizziness / Vertigo</a></h4>
-        <p>Vestibular-focused eval + exercises to steady your world.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
-
-      <article class="service-card">
-        <h4><a href="#">Family & Prenatal</a></h4>
-        <p>Low-force, age-appropriate care for kids, teens, and expecting moms.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+<!-- ============ DOCTOR SECTION ============ -->
+<section id="doctor">
+  <div class="container">
+    <h2>Meet the Doctor</h2>
+    <div class="doc-grid">
+      <div class="doc-image">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/picture%20of%20Ana%20and%20me%20website%20marty-udwdL6SeIg0bdGB11HJ7aNSEFplJJ7.jpg" alt="Dr. Marty Carlson and Ana">
+      </div>
+      <div class="doc-bio">
+        <h3>Dr. Marty Carlson</h3>
+        <p>Dr. Carlson has been in practice since 2001 after Graduating from Life West Chiropractic College in Northern California. He has been involved with Chiropractic Neurology for several years. Dr. Carlson is married to his wonderful wife Ana and has three boys Caiden, Cameron and Cooper. Every member of his family enjoys great health due to a healthy lifestyle and chiropractic adjustments.</p>
+        <p>My hobbies include pickleball, camping, and spending time with my family. I am pleased and honored to treat every person that walks through my door. I love my job and look forward to serving humanity for many years to come. Thank you for being part of the NeuroEdge family.</p>
+        <a href="about.html" class="btn btn-secondary">Full Bio</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1082,38 +1061,76 @@
 
     <div class="conditions-grid">
       <article class="condition-card">
-        <h4>Headaches & Migraines</h4>
+        <h4><a href="headaches-migraines.html">Headaches & Migraines</a></h4>
         <p>Reduce frequency and intensity by addressing neck mechanics, nerve irritation, and triggers.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+        <a href="headaches-migraines.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
       </article>
 
       <article class="condition-card">
-        <h4>Low Back Pain & Sciatica</h4>
+        <h4><a href="low-back-sciatica.html">Low Back Pain & Sciatica</a></h4>
         <p>Calm inflamed nerves and unload irritated discs with decompression and targeted rehab.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+        <a href="low-back-sciatica.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
       </article>
 
       <article class="condition-card">
-        <h4>Neck & Upper Back</h4>
+        <h4><a href="neck-upper-back.html">Neck & Upper Back</a></h4>
         <p>Restore posture and joint motion to relieve stiffness and daily discomfort.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+        <a href="neck-upper-back.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
       </article>
 
       <article class="condition-card">
-        <h4>Auto Accidents</h4>
+        <h4><a href="auto-accidents.html">Auto Accidents</a></h4>
         <p>Evaluation and treatment for whiplash and spine injuries after an accident, with rehab.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
-                                                                                                                <article class="condition-card">
-        <h4>Shoulder / Hip Pain</h4>
-        <p>Assess mechanics and stabilize support muscles to restore pain-free motion.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+        <a href="auto-accidents.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
       </article>
 
       <article class="condition-card">
-        <h4>Dizziness / Vertigo</h4>
+        <h4><a href="shoulder-hip-pain.html">Shoulder / Hip Pain</a></h4>
+        <p>Assess mechanics and stabilize support muscles to restore pain-free motion.</p>
+        <a href="shoulder-hip-pain.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+      </article>
+
+      <article class="condition-card">
+        <h4><a href="dizziness-vertigo.html">Dizziness / Vertigo</a></h4>
         <p>Vestibular and cervical evaluation with specific exercises to steady your world.</p>
-        <a href="#" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+        <a href="dizziness-vertigo.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+      </article>
+
+      <article class="condition-card">
+        <h4><a href="extremity-pain.html">Extremities (Wrist, Ankle, Elbow, Knee)</a></h4>
+        <p>Specialized care for joint pain and dysfunction in arms, legs, hands, and feet.</p>
+        <a href="extremity-pain.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+      </article>
+
+      <article class="condition-card">
+        <h4><a href="sports-injuries.html">Sports Injuries</a></h4>
+        <p>Get back in the game faster with targeted treatment and rehab for athletic injuries.</p>
+        <a href="sports-injuries.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+      </article>
+
+      <article class="condition-card">
+        <h4><a href="disc-herniations.html">Disc Bulges & Herniations</a></h4>
+        <p>Non-surgical decompression and care to relieve pressure on spinal discs and nerves.</p>
+        <a href="disc-herniations.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+      </article>
+
+      <!-- Adding 3 new condition cards: Fibromyalgia, Work Injuries, Pregnancy & Kids -->
+      <article class="condition-card">
+        <h4><a href="fibromyalgia.html">Fibromyalgia</a></h4>
+        <p>Gentle, nervous-system–focused care to improve sleep, lessen tender-point sensitivity, and reduce flare frequency.</p>
+        <a href="fibromyalgia.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+      </article>
+
+      <article class="condition-card">
+        <h4><a href="work-injuries.html">Work Injuries</a></h4>
+        <p>Evaluation, documentation, and a return-to-work plan that reduces pain and restores function—whether it's lifting, repetitive strain, or desk-related.</p>
+        <a href="work-injuries.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
+      </article>
+
+      <article class="condition-card">
+        <h4><a href="pregnancy-pediatric.html">Pregnancy & Kids (Chiropractic Care)</a></h4>
+        <p>Low-force, age-appropriate care: ease pregnancy-related back/hip pain and support optimal pelvic mechanics; gentle pediatric visits to help kids move and grow comfortably.</p>
+        <a href="pregnancy-pediatric.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
       </article>
     </div>
   </div>
@@ -1148,6 +1165,7 @@
               <option>Neck Pain / Headaches</option>
               <option>Shoulder / Hip / Knee</option>
               <option>Dizziness / Vertigo</option>
+              <option>SoftWave Therapy</option>
               <option>Class IV Laser</option>
               <option>General Consultation</option>
             </select>
@@ -1232,12 +1250,12 @@
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="#doctor">Meet the Doctor</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Meet the Doctor</a></li>
           <li><a href="#contact">Appointment Request</a></li>
-          <li><a href="#services">How We Help</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Location</a></li>
+          <li><a href="services.html">How We Help</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="location.html">Location</a></li>
         </ul>
       </div>
     </div>
