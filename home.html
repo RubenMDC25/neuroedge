@@ -3,29 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>NeuroEdge Chiropractic | Murrieta, CA — Neurological & Structural Care</title>
+  <title>SoftWave Therapy | NeuroEdge Chiropractic - Murrieta, CA</title>
   
-  <meta property="og:title" content="NeuroEdge Chiropractic — Murrieta, CA" />
-  <meta property="og:url" content="https://www.neuroedgechiropractic.com/" />
-  <meta property="og:image" content="https://www.neuroedgechiropractic.com/images/og-hero.jpg" />
   <link rel="icon" type="image/png" href="https://www.neuroedgechiropractic.com/assets/favicon.png"/>
-
-  <!-- Inter Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Normalize & Slick Carousel -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
   <style>
     :root {
-      /* Brand Palette */
-      --brand-blue: #235789;      /* Deep Navy */
-      --brand-red: #c1292e;        /* Fire Engine Red */
-      --brand-white: #ffffff;      /* Pure White */
-      
-      /* Neutrals */
+      --brand-blue: #235789;
+      --brand-red: #c1292e;
+      --brand-white: #ffffff;
       --bg: #f9fafb;
       --surface: #ffffff;
       --text-primary: #0f172a;
@@ -33,12 +21,8 @@
       --border: #e2e8f0;
       --shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
       --shadow-lg: 0 10px 28px rgba(15, 23, 42, 0.12);
-      
-      /* Spacing */
       --gutter: 24px;
       --maxw: 1200px;
-      
-      /* Border Radius */
       --radius-sm: 8px;
       --radius-md: 12px;
       --radius-lg: 16px;
@@ -75,7 +59,6 @@
       color: var(--brand-red);
     }
 
-    /* Typography */
     h1, h2, h3, h4, h5, h6 {
       font-weight: 700;
       line-height: 1.2;
@@ -108,14 +91,12 @@
       font-size: 16px;
     }
 
-    /* Layout */
     .container {
       max-width: var(--maxw);
       margin: 0 auto;
       padding: 0 var(--gutter);
     }
 
-    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -169,21 +150,7 @@
       transform: translateY(-2px);
     }
 
-    /* Chip/Badge */
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, rgba(35, 87, 137, 0.08), rgba(193, 41, 46, 0.08));
-      border: 1px solid rgba(35, 87, 137, 0.12);
-      color: var(--brand-blue);
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    /* ============ HEADER ============ */
+    /* Header */
     #site_header {
       position: sticky;
       top: 0;
@@ -278,499 +245,58 @@
       }
     }
 
-    /* ============ HERO ============ */
-    #hero {
-      position: relative;
-      height: 500px;
-      overflow: hidden;
+    /* Page Hero */
+    .page-hero {
       background: linear-gradient(135deg, var(--brand-blue) 0%, #1a4166 100%);
-    }
-
-    .hero-slider {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .hero-slide {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-slide-bg {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0.4;
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 600px;
+      padding: 80px var(--gutter);
       color: white;
       text-align: center;
-      padding: 0 20px;
     }
 
-    .hero-content h1 {
+    .page-hero h1 {
       color: white;
       margin-bottom: 16px;
-      font-size: clamp(32px, 5vw, 48px);
     }
 
-    .hero-content > p {
+    .page-hero p {
       color: rgba(255, 255, 255, 0.9);
       font-size: 18px;
-      margin-bottom: 24px;
-      max-width: 100%;
+      max-width: 700px;
+      margin: 0 auto 32px;
     }
 
-    .hero-cta-group {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-      justify-content: center;
-    }
-
-    .hero-cta-group .btn {
-      border-radius: 8px;
-    }
-
-    .hero-cta-group .btn-secondary {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.3);
-      color: white;
-    }
-
-    .hero-cta-group .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.25);
-    }
-
-    .hero-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-    }
-
-    .hero-chips .chip {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.2);
-      color: white;
-    }
-
-    .hero-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      transition: all 0.3s ease;
-    }
-
-    .hero-arrow:hover {
-      background: rgba(255, 255, 255, 0.35);
-      transform: translateY(-50%) scale(1.1);
-    }
-
-    .hero-arrow.prev {
-      left: 20px;
-    }
-
-    .hero-arrow.next {
-      right: 20px;
-    }
-
-    .slick-dots {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      #hero {
-        height: 450px;
-      }
-      .hero-content {
-        max-width: 100%;
-      }
-      .hero-content h1 {
-        font-size: 32px;
-      }
-      .hero-content > p {
-        font-size: 16px;
-      }
-    }
-
-    /* ============ PROMO STRIP ============ */
-    #promo {
-      padding: 20px var(--gutter);
-      background: linear-gradient(90deg, var(--brand-red) 0%, #a01f24 100%);
-      color: white;
-      text-align: center;
-    }
-
-    #promo .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    #promo h4 {
-      margin: 0;
-      color: white;
-      font-size: 18px;
-      flex: 1;
-      min-width: 200px;
-    }
-
-    @media (max-width: 640px) {
-      #promo .container {
-        flex-direction: column;
-      }
-      #promo h4 {
-        font-size: 16px;
-      }
-    }
-
-    /* ============ SERVICES ============ */
-    #services {
+    /* Content Section */
+    .content-section {
       padding: 80px var(--gutter);
-      background: var(--bg);
-    }
-
-    #services .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-    }
-
-    #services h2 {
-      color: var(--brand-blue);
-      margin-bottom: 12px;
-    }
-
-    .services-intro p {
-      color: var(--text-secondary);
-      margin-bottom: 40px;
-      font-size: 16px;
-      max-width: 600px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .service-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .service-card:hover {
-      border-color: var(--brand-blue);
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-4px);
-    }
-
-    .service-card h4 {
-      color: var(--brand-blue);
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    .service-card p {
-      font-size: 14px;
-      margin-bottom: 14px;
-    }
-
-    .service-card > div:last-child {
-      margin-top: auto;
-    }
-
-    @media (max-width: 1024px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      #services {
-        padding: 60px var(--gutter);
-      }
-    }
-
-    /* ============ DOCTOR SECTION ============ */
-    #doctor {
-      padding: 60px var(--gutter);
       background: var(--surface);
     }
 
-    #doctor .container h2 {
-      margin-bottom: 32px;
+    .content-section h2 {
       color: var(--brand-blue);
+      margin-bottom: 24px;
     }
 
-    .doc-grid {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .doc-image {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      transition: transform 0.3s ease;
-    }
-
-    .doc-image:hover {
-      transform: scale(1.02);
-    }
-
-    .doc-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .doc-bio h3 {
+    .content-section h3 {
       color: var(--brand-blue);
-      margin-bottom: 12px;
+      margin: 32px 0 16px;
     }
 
-    .doc-bio p {
+    .content-section p {
       margin-bottom: 20px;
     }
 
-    @media (max-width: 900px) {
-      .doc-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-    }
-
-    /* ============ CONDITIONS ============ */
-    #conditions {
-      padding: 80px var(--gutter);
-      background: var(--surface);
-    }
-
-    #conditions .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-    }
-
-    .conditions-header {
-      margin-bottom: 40px;
-    }
-
-    .conditions-header h2 {
-      color: var(--brand-blue);
-      margin-bottom: 16px;
-    }
-
-    .conditions-header p {
-      font-size: 16px;
-      max-width: 700px;
-      margin-bottom: 12px;
-    }
-
-    .conditions-cta {
-      margin-bottom: 32px;
-    }
-
-    .conditions-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .condition-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      transition: all 0.3s ease;
-    }
-
-    .condition-card:hover {
-      border-color: var(--brand-red);
-      box-shadow: 0 6px 16px rgba(193, 41, 46, 0.12);
-      transform: translateY(-4px);
-    }
-
-    .condition-card h4 {
-      color: var(--brand-blue);
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    .condition-card p {
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    @media (max-width: 1024px) {
-      .conditions-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .conditions-grid {
-        grid-template-columns: 1fr;
-      }
-      #conditions {
-        padding: 60px var(--gutter);
-      }
-    }
-
-    /* ============ CONTACT ============ */
-    #contact {
-      padding: 80px var(--gutter);
-      background: var(--bg);
-    }
-
-    #contact .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-    }
-
-    .contact-form h3,
-    .contact-info h3 {
-      color: var(--brand-blue);
-      margin-bottom: 12px;
-      font-size: 22px;
-    }
-
-    .contact-form > p,
-    .contact-info > p {
-      color: var(--text-secondary);
-      margin-bottom: 24px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-bottom: 18px;
-    }
-
-    label {
-      font-weight: 600;
-      font-size: 14px;
-      color: var(--text-primary);
-    }
-
-    input, select, textarea {
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      background: var(--surface);
-      font-family: inherit;
-      font-size: 15px;
-      color: var(--text-primary);
-      transition: all 0.2s ease;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: var(--brand-blue);
-      box-shadow: 0 0 0 3px rgba(35, 87, 137, 0.08);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    #formStatus {
-      margin-top: 14px;
-      font-size: 14px;
+    .content-section ul {
+      list-style-position: inside;
+      margin: 16px 0;
       color: var(--text-secondary);
     }
 
-    .contact-info p {
+    .content-section li {
       margin-bottom: 8px;
-      font-size: 15px;
+      line-height: 1.65;
     }
 
-    .contact-info strong {
-      color: var(--text-primary);
-    }
-
-    .contact-info a {
-      color: var(--brand-blue);
-    }
-
-    .contact-map {
-      width: 100%;
-      height: 350px;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      margin-top: 16px;
-    }
-
-    .contact-info h4 {
-      color: var(--brand-blue);
-      font-size: 16px;
-      margin: 24px 0 12px;
-    }
-
-    .contact-info ul {
-      list-style: none;
-      line-height: 1.9;
-      color: var(--text-secondary);
-      font-size: 14px;
-    }
-
-    @media (max-width: 900px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-    }
-
-    /* ============ FOOTER ============ */
+    /* Footer */
     footer {
       background: var(--brand-blue);
       color: white;
@@ -882,13 +408,19 @@
       .footer-top h2 {
         font-size: 20px;
       }
+      .content-section {
+        padding: 60px var(--gutter);
+      }
+      .page-hero {
+        padding: 60px var(--gutter);
+      }
     }
   </style>
 </head>
 
 <body>
 
-<!-- ============ HEADER ============ -->
+<!-- Header -->
 <header id="site_header">
   <div class="container">
     <div class="header-bar">
@@ -903,322 +435,164 @@
           <li><a href="patient-forms.html">Patient Forms</a></li>
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="location.html">Location</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
         <a href="tel:(951) 304-2242" class="btn btn-secondary">Call (951) 304-2242</a>
-        <a href="#contact" class="btn btn-primary">Schedule</a>
+        <a href="index.html#contact" class="btn btn-primary">Schedule</a>
       </div>
     </div>
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<section id="hero">
-  <div class="hero-slider">
-    <!-- Slide 1 -->
-    <div class="hero-slide">
-      <div class="hero-slide-bg" style="background-image: url('https://www.neuroedgechiropractic.com/images/hero-1-desktop.jpg')"></div>
-      <div class="container">
-        <div class="hero-content">
-          <h1>NeuroEdge Chiropractic</h1>
-          <p>"Our number one goal is to provide you with a level of service and commitment to your health that is unparalleled." - Dr. Marty Carlson</p>
-          <div class="hero-cta-group">
-            <a href="#contact" class="btn btn-primary">New Patient Appointment</a>
-            <a href="tel:(951) 304-2242" class="btn btn-secondary">Call (951) 304-2242</a>
-          </div>
-          <div class="hero-chips">
-            <span class="chip">Neurological Focus</span>
-            <span class="chip">Spinal Decompression</span>
-            <span class="chip">SoftWave & Laser</span>
-            <span class="chip">Family & Prenatal</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="hero-slide">
-      <div class="hero-slide-bg" style="background-image: url('https://www.neuroedgechiropractic.com/images/hero-softwave-desktop.jpg')"></div>
-      <div class="container">
-        <div class="hero-content">
-          <h1>SoftWave Tissue Regeneration Therapy</h1>
-          <p>Acoustic wave therapy that jump-starts healing for stubborn shoulder, elbow, knee, and plantar fascia pain.</p>
-          <div class="hero-cta-group">
-            <a href="#contact" class="btn btn-primary">Schedule SoftWave</a>
-            <a href="softwave-therapy.html" class="btn btn-secondary">How It Helps</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="hero-slide">
-      <div class="hero-slide-bg" style="background-image: url('https://www.neuroedgechiropractic.com/images/hero-1-desktop.jpg')"></div>
-      <div class="container">
-        <div class="hero-content">
-          <h1>Expert Chiropractic Care</h1>
-          <p>Precise adjustments and neurological assessment to restore function, relieve pain, and optimize your body's natural healing ability.</p>
-          <div class="hero-cta-group">
-            <a href="#contact" class="btn btn-primary">Schedule Your Visit</a>
-            <a href="services.html" class="btn btn-secondary">Our Approach</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="hero-arrow prev" aria-label="Previous slide">❮</button>
-  <button class="hero-arrow next" aria-label="Next slide">❯</button>
-</section>
-
-<!-- ============ PROMO STRIP ============ -->
-<section id="promo">
+<!-- Page Hero -->
+<section class="page-hero">
   <div class="container">
-    <h4>Murrieta's Choice for SoftWave Therapy</h4>
-    <a class="btn btn-secondary" style="background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.3); color: white;" href="#contact">Schedule Now</a>
+    <h1>SoftWave Therapy in Murrieta</h1>
+    <p>Advanced acoustic wave therapy that activates your body's natural healing for stubborn pain and injuries</p>
+    <a href="index.html#contact" class="btn btn-accent">Schedule SoftWave Appointment</a>
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section id="services">
+<!-- Content -->
+<section class="content-section">
   <div class="container">
-    <h2>How We Can Help You</h2>
-    <div class="services-intro">
-      <p>Doctor-led care combining neurological assessment with structural correction to treat the root cause — not just the symptoms.</p>
-    </div>
-    <div class="services-grid">
-      <article class="service-card">
-        <h4><a href="softwave-therapy.html">SoftWave® Therapy</a></h4>
-        <p style="margin-bottom: 8px; font-weight: 600; font-size: 13px; color: var(--brand-blue);">Jump-start your body's repair for stubborn pain</p>
-        <p style="margin-bottom: 12px;"><strong>Best for:</strong> Shoulder, knee, plantar fascia, elbow, hip bursitis/tendinitis, chronic strains — plus many spine/nerve issues (disc irritation, sciatica, SI dysfunction, chronic low back).</p>
-        <p style="margin-bottom: 12px;"><strong>Why it works:</strong> Focused acoustic waves boost micro-circulation, modulate inflammation, and help activate local repair cells so tissue can recover.</p>
-        <p style="margin-bottom: 12px;"><strong>You'll feel:</strong> Firm tapping pulses during a 10–15 minute session; intensity stays comfortable. No downtime.</p>
-        <p style="margin-bottom: 16px;"><strong>Timeline:</strong> Acute problems can shift quickly; chronic cases often benefit from a short series (commonly 4–8 visits) for lasting change.</p>
-        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-          <a href="softwave-therapy.html" class="btn btn-primary" style="font-size: 14px; padding: 8px 14px;">Learn How It Works</a>
-        </div>
-      </article>
+    <h2>What to Expect from SoftWave® Therapy in Murrieta</h2>
+    
+    <h3>What it is (in plain English):</h3>
+    <p>SoftWave Therapy uses focused acoustic (sound) waves delivered through a handheld device to "wake up" your body's natural repair system. Those waves increase local blood flow, calm inflammation, and signal repair cells (including resident stem/repair cells) to get to work—so irritated tissues can recover faster without injections or downtime.</p>
 
-      <article class="service-card">
-        <h4><a href="spinal-decompression.html">Spinal Decompression</a></h4>
-        <p style="margin-bottom: 8px; font-weight: 600; font-size: 13px; color: var(--brand-blue);">Relieve disc pressure, calm nerve pain</p>
-        <p style="margin-bottom: 12px;"><strong>Best for:</strong> Disc bulges/herniations, sciatica/radiculopathy, spinal stenosis, chronic low-back or neck pain after sitting/standing.</p>
-        <p style="margin-bottom: 12px;"><strong>Why it works:</strong> Computer-controlled traction gently unloads the spine, lowering intradiscal pressure to promote hydration and reduce irritation on nearby nerves.</p>
-        <p style="margin-bottom: 12px;"><strong>You'll feel:</strong> A comfortable, cyclical stretch; most sessions run 12–20 minutes with you lying relaxed and strapped in.</p>
-        <p style="margin-bottom: 16px;"><strong>Timeline:</strong> Many patients notice easing within the first few weeks; durable change typically requires a focused series with reassessments to guide progress.</p>
-        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-          <a href="spinal-decompression.html" class="btn btn-primary" style="font-size: 14px; padding: 8px 14px;">Is It Right for Me?</a>
-        </div>
-      </article>
+    <h3>How it works:</h3>
+    <p>The applicator glides over the skin with a small amount of gel while it sends controlled pulses into the tissue below. These pulses create a brief pressure change that triggers a healing cascade: circulation improves, inflammatory mediators down-shift, and the area begins remodeling rather than staying stuck in a painful, inflamed state.</p>
 
-      <article class="service-card">
-        <h4><a href="services.html">Chiropractic Care</a></h4>
-        <p style="margin-bottom: 8px; font-weight: 600; font-size: 13px; color: var(--brand-blue);">Restore motion, reduce pain, move better</p>
-        <p style="margin-bottom: 12px;"><strong>Best for:</strong> Neck and back pain, headaches/migraines, mid-back/rib pain, posture strain, pregnancy-related discomfort, general maintenance/wellness.</p>
-        <p style="margin-bottom: 12px;"><strong>Why it works:</strong> Precise, low-force adjustments restore joint mechanics, which can reduce local inflammation/nerve irritation and improve movement patterns.</p>
-        <p style="margin-bottom: 12px;"><strong>You'll feel:</strong> Techniques tailored to you—traditional hands-on or instrument-assisted, plus mobility and strength work as needed.</p>
-        <p style="margin-bottom: 16px;"><strong>Timeline:</strong> Acute sprains/strains often improve over a few visits; longer-standing issues do best with a staged plan (restore → stabilize → maintain).</p>
-        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-          <a href="services.html" class="btn btn-primary" style="font-size: 14px; padding: 8px 14px;">What to Expect</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+    <h3>Our process at NeuroEdge Chiropractic:</h3>
+    <p>When you choose NeuroEdge Chiropractic for SoftWave Therapy, you'll get a personalized, attentive visit led by Dr. Carlson and our clinical team. We start with a thorough evaluation of your condition and goals, then design a plan tailored to your needs—often paired with targeted rehab or chiropractic adjustments so results last.</p>
 
-<!-- ============ DOCTOR SECTION ============ -->
-<section id="doctor">
-  <div class="container">
-    <h2>Meet the Doctor</h2>
-    <div class="doc-grid">
-      <div class="doc-image">
-        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/picture%20of%20Ana%20and%20me%20website%20marty-udwdL6SeIg0bdGB11HJ7aNSEFplJJ7.jpg" alt="Dr. Marty Carlson and Ana">
-      </div>
-      <div class="doc-bio">
-        <h3>Dr. Marty Carlson</h3>
-        <p>Dr. Carlson has been in practice since 2001 after Graduating from Life West Chiropractic College in Northern California. He has been involved with Chiropractic Neurology for several years. Dr. Carlson is married to his wonderful wife Ana and has three boys Caiden, Cameron and Cooper. Every member of his family enjoys great health due to a healthy lifestyle and chiropractic adjustments.</p>
-        <p>My hobbies include pickleball, camping, and spending time with my family. I am pleased and honored to treat every person that walks through my door. I love my job and look forward to serving humanity for many years to come. Thank you for being part of the NeuroEdge family.</p>
-        <a href="about.html" class="btn btn-secondary">Full Bio</a>
+    <h3>What you'll feel during treatment:</h3>
+    <p>Most patients describe firm "tapping" pulses. Sessions typically last 10–15 minutes. Discomfort is minimal and adjustable; there's no downtime, so you can return to normal activities right away.</p>
+
+    <h3>Typical timeline:</h3>
+    <ul>
+      <li>Acute issues (new injuries) may improve quickly.</li>
+      <li>Chronic problems usually respond over a short series—about 4–8 visits, spaced as clinically appropriate.</li>
+    </ul>
+
+    <h3>After your session:</h3>
+    <p>Mild soreness for 24–48 hours is normal as tissues respond. We'll give you simple do's and don'ts and, when helpful, exercises to support healing between visits.</p>
+    
+    <p style="margin-top: 32px;"><strong>Ready to experience drug-free pain relief and faster recovery?</strong> <a href="index.html#contact">Request a SoftWave appointment today.</a></p>
+
+    <div style="margin-top: 48px; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+        <iframe 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+          title="SoftWave Therapy Demonstration" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ============ CONDITIONS ============ -->
-<section id="conditions">
-  <div class="container">
-    <div class="conditions-header">
-      <h2>Conditions We Help With</h2>
-      <p>From headaches and migraines to disc issues, sciatica, sports injuries, and chronic pain, we focus on the neurological and structural root cause so you can move and feel better, longer.</p>
-      <p>Not sure if it's in our lane? Book a consult and we'll give you a straight answer.</p>
-    </div>
+    <h2 style="margin-top: 60px;">Common Spine & Nerve Conditions We Treat with SoftWave Tissue Regeneration Therapy</h2>
+    
+    <ul>
+      <li>Lumbar and cervical disc herniations</li>
+      <li>Sciatica and nerve root compression</li>
+      <li>Disc bulges and herniated discs</li>
+      <li>Spinal stenosis</li>
+      <li>Degenerative disc disease (DDD)</li>
+      <li>Sacroiliac (SI) joint dysfunction</li>
+      <li>Chronic lower back pain</li>
+      <li>Facet joint pain</li>
+      <li>Post-surgical spinal and nerve pain</li>
+    </ul>
 
-    <div class="conditions-cta">
-      <a class="btn btn-primary" href="#contact">Schedule Appointment</a>
-    </div>
+    <p style="margin-top: 24px; font-style: italic;">Whether you've tried chiropractic, physical therapy, injections, or pain medications without lasting relief, SoftWave may be the breakthrough you've been waiting for.</p>
 
-    <div class="conditions-grid">
-      <article class="condition-card">
-        <h4><a href="headaches-migraines.html">Headaches & Migraines</a></h4>
-        <p>Reduce frequency and intensity by addressing neck mechanics, nerve irritation, and triggers.</p>
-        <a href="headaches-migraines.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <h2 style="margin-top: 60px;">SoftWave Therapy for Athletes: Speeding Up Recovery and Reducing Downtime</h2>
+    
+    <p>Athletes constantly push their bodies to the limit, striving for peak performance and faster recovery after intense training or injury. However, repetitive stress and strain can lead to muscle soreness, inflammation, and tissue damage. Traditional recovery methods often take time—but innovative treatments like SoftWave therapy are transforming how athletes heal.</p>
 
-      <article class="condition-card">
-        <h4><a href="low-back-sciatica.html">Low Back Pain & Sciatica</a></h4>
-        <p>Calm inflamed nerves and unload irritated discs with decompression and targeted rehab.</p>
-        <a href="low-back-sciatica.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <p>At NeuroEdge Chiropractic, SoftWave Therapy offers a cutting-edge approach to accelerating recovery and restoring function. Whether you're dealing with chronic pain, sports injuries, or muscle fatigue, this non-invasive treatment helps your body heal naturally, getting you back to your game faster.</p>
 
-      <article class="condition-card">
-        <h4><a href="neck-upper-back.html">Neck & Upper Back</a></h4>
-        <p>Restore posture and joint motion to relieve stiffness and daily discomfort.</p>
-        <a href="neck-upper-back.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <h3>Understanding How SoftWave Therapy Works</h3>
+    
+    <p>SoftWave Therapy—also known as SoftWave Tissue Regeneration Technology—uses patented acoustic wave technology to stimulate the body's natural healing processes. The device delivers high-energy sound waves to targeted areas, reaching deep into muscles, tendons, and ligaments without damaging surrounding tissues.</p>
 
-      <article class="condition-card">
-        <h4><a href="auto-accidents.html">Auto Accidents</a></h4>
-        <p>Evaluation and treatment for whiplash and spine injuries after an accident, with rehab.</p>
-        <a href="auto-accidents.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <p>When these waves interact with the affected area, they:</p>
+    <ul>
+      <li>Increase blood flow to enhance oxygen and nutrient delivery</li>
+      <li>Activate dormant stem cells to promote tissue regeneration</li>
+      <li>Reduce inflammation and swelling</li>
+      <li>Break down scar tissue to improve flexibility</li>
+    </ul>
 
-      <article class="condition-card">
-        <h4><a href="shoulder-hip-pain.html">Shoulder / Hip Pain</a></h4>
-        <p>Assess mechanics and stabilize support muscles to restore pain-free motion.</p>
-        <a href="shoulder-hip-pain.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <p>This combination helps athletes recover from acute and chronic injuries more effectively, reducing the need for downtime.</p>
 
-      <article class="condition-card">
-        <h4><a href="dizziness-vertigo.html">Dizziness / Vertigo</a></h4>
-        <p>Vestibular and cervical evaluation with specific exercises to steady your world.</p>
-        <a href="dizziness-vertigo.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <h3>The Role of SoftWave Pain Relief in Sports Recovery</h3>
+    
+    <p>Athletic injuries often cause inflammation and microtears in muscles or ligaments that lead to persistent pain. While rest and traditional therapies can help, they often take weeks or months for full recovery. SoftWave pain relief provides a faster solution by accelerating the healing cycle from the inside out.</p>
 
-      <article class="condition-card">
-        <h4><a href="extremity-pain.html">Extremities (Wrist, Ankle, Elbow, Knee)</a></h4>
-        <p>Specialized care for joint pain and dysfunction in arms, legs, hands, and feet.</p>
-        <a href="extremity-pain.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <p>This therapy is especially effective for:</p>
+    <ul>
+      <li>Muscle strains and sprains</li>
+      <li>Tendonitis or overuse injuries</li>
+      <li>Plantar fasciitis and shin splints</li>
+      <li>Shoulder, knee, or elbow pain</li>
+      <li>Chronic inflammation or scar tissue buildup</li>
+    </ul>
 
-      <article class="condition-card">
-        <h4><a href="sports-injuries.html">Sports Injuries</a></h4>
-        <p>Get back in the game faster with targeted treatment and rehab for athletic injuries.</p>
-        <a href="sports-injuries.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <p>By addressing the root cause rather than masking symptoms, SoftWave Therapy enables long-term improvement. Many athletes report reduced pain and improved mobility after just a few sessions—making it a trusted option for those who want to return to training without compromising their recovery.</p>
 
-      <article class="condition-card">
-        <h4><a href="disc-herniations.html">Disc Bulges & Herniations</a></h4>
-        <p>Non-surgical decompression and care to relieve pressure on spinal discs and nerves.</p>
-        <a href="disc-herniations.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <h3>Benefits of SoftWave Therapy for Athletic Performance</h3>
+    
+    <p>Athletes at every level—from professionals to weekend runners—can experience the powerful effects of SoftWave Therapy. Here's how it contributes to improved recovery and performance:</p>
 
-      <!-- Adding 3 new condition cards: Fibromyalgia, Work Injuries, Pregnancy & Kids -->
-      <article class="condition-card">
-        <h4><a href="fibromyalgia.html">Fibromyalgia</a></h4>
-        <p>Gentle, nervous-system–focused care to improve sleep, lessen tender-point sensitivity, and reduce flare frequency.</p>
-        <a href="fibromyalgia.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <p><strong>1. Accelerates Natural Healing</strong><br>
+    The acoustic waves stimulate the body's own regenerative capabilities, promoting faster tissue repair without the need for invasive treatments.</p>
 
-      <article class="condition-card">
-        <h4><a href="work-injuries.html">Work Injuries</a></h4>
-        <p>Evaluation, documentation, and a return-to-work plan that reduces pain and restores function—whether it's lifting, repetitive strain, or desk-related.</p>
-        <a href="work-injuries.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <p><strong>2. Reduces Inflammation and Pain</strong><br>
+    By improving circulation and reducing swelling, SoftWave Therapy helps manage pain naturally, allowing athletes to stay active and avoid extended rest periods.</p>
 
-      <article class="condition-card">
-        <h4><a href="pregnancy-pediatric.html">Pregnancy & Kids (Chiropractic Care)</a></h4>
-        <p>Low-force, age-appropriate care: ease pregnancy-related back/hip pain and support optimal pelvic mechanics; gentle pediatric visits to help kids move and grow comfortably.</p>
-        <a href="pregnancy-pediatric.html" class="btn btn-secondary" style="width: fit-content; font-size: 14px; padding: 8px 14px;">Learn More</a>
-      </article>
+    <p><strong>3. Improves Range of Motion</strong><br>
+    Breaking down scar tissue and muscle adhesions helps restore flexibility and function, which is crucial for preventing future injuries.</p>
+
+    <p><strong>4. Enhances Blood Flow and Oxygen Delivery</strong><br>
+    Increased circulation supports endurance and recovery, helping athletes perform at their best consistently.</p>
+
+    <p><strong>5. Non-Invasive and Drug-Free</strong><br>
+    Unlike injections or surgery, SoftWave Therapy requires no downtime, no medication, and no risk of side effects—just natural, long-lasting relief.</p>
+
+    <h3>What to Expect During a SoftWave Therapy Session</h3>
+    
+    <p>A typical session begins with a brief evaluation of the affected area to determine the optimal treatment settings. The SoftWave device is then applied to the skin, emitting gentle acoustic pulses. Most patients describe the sensation as mild discomfort or pressure, but it's generally well-tolerated.</p>
+
+    <p>Sessions usually last 10–15 minutes, depending on the size of the treatment area. Many patients experience noticeable relief after the first few sessions, though a complete treatment plan may involve multiple visits for lasting results.</p>
+
+    <p>Athletes often combine SoftWave Therapy with stretching, strengthening exercises, and chiropractic care to maximize recovery outcomes.</p>
+
+    <h3>Getting Back in the Game Faster</h3>
+    
+    <p>For athletes, every day of downtime matters. SoftWave Therapy provides a safe, evidence-based solution to accelerate recovery, relieve pain, and enhance performance. By integrating it with chiropractic adjustments and spinal therapies, NeuroEdge Chiropractic helps athletes restore balance, strength, and function—without invasive procedures or extended recovery periods.</p>
+
+    <p>Whether you're recovering from an injury or looking to optimize your physical performance, SoftWave Therapy can help your body heal smarter and faster.</p>
+
+    <div style="margin-top: 48px; text-align: center;">
+      <a href="index.html#contact" class="btn btn-primary" style="padding: 14px 28px; font-size: 16px;">Schedule an Appointment</a>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-form">
-        <h3>Request an Appointment</h3>
-        <p>Tell us what's going on. We'll reach out to confirm a time.</p>
-
-        <form id="contactForm" method="POST" action="https://formspree.io/f/your-form-id">
-          <div class="form-group">
-            <label for="name">Full Name*</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone*</label>
-            <input type="tel" id="phone" name="phone" required />
-          </div>
-          <div class="form-group">
-            <label for="reason">Reason for Visit</label>
-            <select id="reason" name="reason">
-              <option value="">Select…</option>
-              <option>Low Back / Sciatica</option>
-              <option>Neck Pain / Headaches</option>
-              <option>Shoulder / Hip / Knee</option>
-              <option>Dizziness / Vertigo</option>
-              <option>SoftWave Therapy</option>
-              <option>Class IV Laser</option>
-              <option>General Consultation</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Describe your issue in a few sentences…"></textarea>
-          </div>
-          <input type="hidden" name="_subject" value="New NeuroEdge Appointment Request" />
-          <button type="submit" class="btn btn-primary">Submit Request</button>
-          <p id="formStatus"></p>
-        </form>
-      </div>
-
-      <div class="contact-info">
-        <h3>Find Us</h3>
-        <p><strong>Address:</strong> 25032 Las Brisas Rd #A, Murrieta, CA 92562</p>
-        <p><strong>Phone:</strong> <a href="tel:(951) 304-2242">(951) 304-2242</a></p>
-
-        <div class="contact-map">
-          <iframe
-            title="NeuroEdge Chiropractic Location"
-            width="100%" height="100%" frameborder="0" style="border:0"
-            src="https://www.google.com/maps?q=25032%20Las%20Brisas%20Rd%20%23A%2C%20Murrieta%2C%20CA%2092562&output=embed"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <p style="margin-top: 16px;">
-          <a class="btn btn-secondary" href="https://maps.app.goo.gl/D8CxsDwbY9eisvad7" target="_blank" rel="noopener">Open in Google Maps</a>
-        </p>
-
-        <h4>Hours</h4>
-        <ul>
-          <li>Mon: 8:00 AM – 12:00 PM, 2:00 PM – 6:00 PM</li>
-          <li>Tue: 8:00 AM – 12:00 PM, 2:00 PM – 5:00 PM</li>
-          <li>Wed: 8:00 AM – 12:00 PM, 2:00 PM – 6:00 PM</li>
-          <li>Thu: 8:00 AM – 12:00 PM, 2:00 PM – 6:00 PM</li>
-          <li>Fri: Closed</li>
-          <li>Sat: Closed</li>
-          <li>Sun: Closed</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
+<!-- Footer -->
 <footer>
   <div class="footer-top">
     <div class="container">
       <h2>Experience Health & Healing Today!</h2>
-      <a class="btn btn-accent" href="#contact">Request an Appointment</a>
+      <a class="btn btn-accent" href="index.html#contact">Request an Appointment</a>
     </div>
   </div>
 
@@ -1252,7 +626,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">Meet the Doctor</a></li>
-          <li><a href="#contact">Appointment Request</a></li>
+          <li><a href="index.html#contact">Appointment Request</a></li>
           <li><a href="services.html">How We Help</a></li>
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="location.html">Location</a></li>
@@ -1269,62 +643,5 @@
   </div>
 </footer>
 
-<!-- ============ SCRIPTS ============ -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-  (function($){
-    $(function(){
-      // Initialize hero slider
-      if ($('.hero-slider').length) {
-        const slickCarousel = $('.hero-slider').slick({
-          dots: false,
-          arrows: false,
-          infinite: true,
-          speed: 600,
-          fade: true,
-          cssEase: 'ease-in-out',
-          autoplay: true,
-          autoplaySpeed: 5000,
-          pauseOnHover: true,
-          adaptiveHeight: false
-        });
-
-        $('.hero-arrow.prev').on('click', function() {
-          slickCarousel.slick('slickPrev');
-        });
-
-        $('.hero-arrow.next').on('click', function() {
-          slickCarousel.slick('slickNext');
-        });
-      }
-
-      // Contact form handler
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
-      if (form) {
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          status.textContent = 'Sending...';
-          try {
-            const res = await fetch(form.action, {
-              method: 'POST',
-              body: new FormData(form),
-              headers: { 'Accept': 'application/json' }
-            });
-            if (res.ok) {
-              status.textContent = 'Thanks! We\'ll be in touch shortly.';
-              form.reset();
-            } else {
-              status.textContent = 'Something went wrong. Please call (951) 304-2242.';
-            }
-          } catch (err) {
-            status.textContent = 'Network error. Please call (951) 304-2242.';
-          }
-        });
-      }
-    });
-  })(jQuery);
-</script>
 </body>
 </html>
