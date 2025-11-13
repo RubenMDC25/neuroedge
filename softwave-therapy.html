@@ -4,159 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>SoftWave Therapy | NeuroEdge Chiropractic - Murrieta, CA</title>
-  
+
   <link rel="icon" type="image/png" href="https://www.neuroedgechiropractic.com/assets/favicon.png"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-
   <style>
-    :root {
-      --brand-blue: #235789;
-      --brand-red: #c1292e;
-      --brand-white: #ffffff;
-      --bg: #f9fafb;
-      --surface: #ffffff;
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
-      --border: #e2e8f0;
-      --shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
-      --shadow-lg: 0 10px 28px rgba(15, 23, 42, 0.12);
-      --gutter: 24px;
-      --maxw: 1200px;
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 16px;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html, body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text-primary);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    img { max-width: 100%; display: block; height: auto; }
-
-    a { color: var(--brand-blue); text-decoration: none; transition: color 0.2s ease; }
-    a:hover { color: var(--brand-red); }
-
-    h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; color: var(--text-primary); }
-    h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 800; }
-    h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; }
-    h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; }
-    h4 { font-size: 16px; font-weight: 700; }
-    p  { color: var(--text-secondary); line-height: 1.65; font-size: 16px; }
-
-    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
-
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px;
-      border-radius: 8px; font-weight: 600; font-size: 15px; border: 1px solid transparent;
-      cursor: pointer; transition: all 0.2s ease; font-family: inherit;
-    }
-    .btn:active { transform: translateY(1px); }
-    .btn-primary { background: var(--brand-blue); color: #fff; box-shadow: 0 2px 8px rgba(35,87,137,.15); }
-    .btn-primary:hover { background: #1a4166; box-shadow: 0 4px 12px rgba(35,87,137,.25); transform: translateY(-2px); }
-    .btn-secondary { background: var(--brand-white); color: var(--brand-blue); border-color: var(--brand-blue); }
-    .btn-secondary:hover { background: #f0f6fc; transform: translateY(-2px); }
-    .btn-accent { background: var(--brand-red); color: #fff; box-shadow: 0 2px 8px rgba(193,41,46,.15); }
-    .btn-accent:hover { background: #a01f24; box-shadow: 0 4px 12px rgba(193,41,46,.25); transform: translateY(-2px); }
-
-    /* Header */
-    #site_header {
-      position: sticky; top: 0; z-index: 100; background: var(--surface);
-      border-bottom: 1px solid var(--border); backdrop-filter: blur(8px);
-      background-color: rgba(255,255,255,.95);
-    }
-    .header-bar { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 24px; padding: 0 24px; }
-    .logo { display: flex; align-items: center; flex-shrink: 0; }
-    .logo img { height: 64px; width: auto; transition: transform .2s ease; }
-    #nav ul { display: flex; list-style: none; gap: 24px; flex: 1; flex-wrap: nowrap; }
-    #nav a { font-size: 14px; font-weight: 500; color: var(--text-primary); position: relative; white-space: nowrap; }
-    #nav a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background: var(--brand-blue); transition: width .3s ease; }
-    #nav a:hover::after { width: 100%; }
-    .header-cta { display: flex; align-items: center; gap: 12px; }
-
-    @media (max-width:1024px){ #nav ul{gap:16px;} #nav a{font-size:13px;} }
-    @media (max-width:768px){
-      .header-bar{height:60px; gap:12px;}
-      #nav ul{display:none;}
-      .header-cta{flex-wrap:wrap;}
-      .header-cta .btn{padding:10px 16px; font-size:14px;}
-    }
-
-    /* Page Hero */
-    .page-hero {
-      background: linear-gradient(135deg, var(--brand-blue) 0%, #1a4166 100%);
-      padding: 80px var(--gutter); color: #fff; text-align: center;
-    }
-    .page-hero h1 { color: #fff; margin-bottom: 16px; }
-    .page-hero p  { color: rgba(255,255,255,.9); font-size: 18px; max-width: 700px; margin: 0 auto 32px; }
-
-    /* Content */
-    .content-section { padding: 80px var(--gutter); background: var(--surface); }
-    .content-section h2 { color: var(--brand-blue); margin-bottom: 24px; }
-    .content-section h3 { color: var(--brand-blue); margin: 32px 0 16px; }
-    .content-section p  { margin-bottom: 20px; }
-    .content-section ul { list-style-position: inside; margin: 16px 0; color: var(--text-secondary); }
-    .content-section li { margin-bottom: 8px; line-height: 1.65; }
-
-    /* Responsive video wrapper */
-    .video-wrap {
-      position: relative; width: 100%; max-width: 800px; margin: 48px auto 0;
-      padding-bottom: 56.25%; /* 16:9 */
-      height: 0; overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
-      background: #000;
-    }
-    .video-wrap video {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      object-fit: cover; border: 0; display: block;
-    }
-
-    /* Footer */
-    footer { background: var(--brand-blue); color: #fff; }
-    .footer-top { padding: 40px var(--gutter); border-bottom: 1px solid rgba(255,255,255,.08); }
-    .footer-top .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-    .footer-top h2 { color: #fff; font-size: 24px; margin: 0; flex: 1; }
-    .footer-mid { padding: 48px var(--gutter); border-bottom: 1px solid rgba(255,255,255,.08); }
-    .footer-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; max-width: var(--maxw); margin: 0 auto;
-    }
-    .footer-col.logo-col { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-    .footer-col.logo-col img { height: 120px; width: auto; transition: transform .3s ease; }
-    .footer-col.logo-col img:hover { transform: scale(1.05); }
-    .footer-col h4 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: .5px; }
-    .footer-col ul { list-style: none; line-height: 1.9; }
-    .footer-col a  { color: #cbd5e1; font-size: 14px; }
-    .footer-col a:hover { color: #fff; }
-    .footer-bottom { padding: 24px var(--gutter); border-top: 1px solid rgba(255,255,255,.08); font-size: 13px; color: #cbd5e1; }
-    .footer-bottom .container { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-
-    @media (max-width:1024px){ .footer-grid{grid-template-columns: repeat(2,1fr); gap:24px;} }
-    @media (max-width:640px){
-      .footer-grid{grid-template-columns:1fr;}
-      .footer-top .container{flex-direction:column; align-items:flex-start;}
-      .footer-top h2{font-size:20px;}
-      .content-section{padding:60px var(--gutter);}
-      .page-hero{padding:60px var(--gutter);}
-    }
+    :root{--brand-blue:#235789;--brand-red:#c1292e;--brand-white:#fff;--bg:#f9fafb;--surface:#fff;--text-primary:#0f172a;--text-secondary:#475569;--border:#e2e8f0;--shadow:0 4px 12px rgba(15,23,42,.08);--shadow-lg:0 10px 28px rgba(15,23,42,.12);--gutter:24px;--maxw:1200px;--radius-sm:8px;--radius-md:12px;--radius-lg:16px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text-primary);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    img{max-width:100%;display:block;height:auto}
+    a{color:var(--brand-blue);text-decoration:none;transition:color .2s ease}a:hover{color:var(--brand-red)}
+    h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.2;color:var(--text-primary)}h1{font-size:clamp(28px,5vw,48px);font-weight:800}h2{font-size:clamp(24px,4vw,36px);font-weight:800}h3{font-size:clamp(18px,3vw,24px);font-weight:700}h4{font-size:16px;font-weight:700}p{color:var(--text-secondary);line-height:1.65;font-size:16px}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:8px;font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;transition:all .2s ease;font-family:inherit}
+    .btn:active{transform:translateY(1px)}.btn-primary{background:var(--brand-blue);color:#fff;box-shadow:0 2px 8px rgba(35,87,137,.15)}.btn-primary:hover{background:#1a4166;box-shadow:0 4px 12px rgba(35,87,137,.25);transform:translateY(-2px)}.btn-secondary{background:var(--brand-white);color:var(--brand-blue);border-color:var(--brand-blue)}.btn-secondary:hover{background:#f0f6fc;transform:translateY(-2px)}.btn-accent{background:var(--brand-red);color:#fff;box-shadow:0 2px 8px rgba(193,41,46,.15)}.btn-accent:hover{background:#a01f24;box-shadow:0 4px 12px rgba(193,41,46,.25);transform:translateY(-2px)}
+    #site_header{position:sticky;top:0;z-index:100;background:var(--surface);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);background-color:rgba(255,255,255,.95)}
+    .header-bar{display:flex;align-items:center;justify-content:space-between;height:70px;gap:24px;padding:0 24px}.logo{display:flex;align-items:center;flex-shrink:0}.logo img{height:64px;width:auto;transition:transform .2s ease}
+    #nav ul{display:flex;list-style:none;gap:24px;flex:1;flex-wrap:nowrap}#nav a{font-size:14px;font-weight:500;color:var(--text-primary);position:relative;white-space:nowrap}#nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--brand-blue);transition:width .3s ease}#nav a:hover::after{width:100%}
+    .header-cta{display:flex;align-items:center;gap:12px}
+    @media (max-width:1024px){#nav ul{gap:16px}#nav a{font-size:13px}}
+    @media (max-width:768px){.header-bar{height:60px;gap:12px}#nav ul{display:none}.header-cta{flex-wrap:wrap}.header-cta .btn{padding:10px 16px;font-size:14px}}
+    .page-hero{background:linear-gradient(135deg,var(--brand-blue) 0%,#1a4166 100%);padding:80px var(--gutter);color:#fff;text-align:center}
+    .page-hero h1{color:#fff;margin-bottom:16px}.page-hero p{color:rgba(255,255,255,.9);font-size:18px;max-width:700px;margin:0 auto 32px}
+    .content-section{padding:80px var(--gutter);background:var(--surface)}.content-section h2{color:var(--brand-blue);margin-bottom:24px}.content-section h3{color:var(--brand-blue);margin:32px 0 16px}.content-section p{margin-bottom:20px}.content-section ul{list-style-position:inside;margin:16px 0;color:var(--text-secondary)}.content-section li{margin-bottom:8px;line-height:1.65}
+    .video-wrap{position:relative;width:100%;max-width:800px;margin:48px auto 0;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);background:#000}
+    .video-wrap video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;display:block}
+    footer{background:var(--brand-blue);color:#fff}.footer-top{padding:40px var(--gutter);border-bottom:1px solid rgba(255,255,255,.08)}.footer-top .container{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}.footer-top h2{color:#fff;font-size:24px;margin:0;flex:1}
+    .footer-mid{padding:48px var(--gutter);border-bottom:1px solid rgba(255,255,255,.08)}.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;max-width:var(--maxw);margin:0 auto}.footer-col.logo-col{display:flex;flex-direction:column;align-items:center;justify-content:center}.footer-col.logo-col img{height:120px;width:auto;transition:transform .3s ease}.footer-col.logo-col img:hover{transform:scale(1.05)}
+    .footer-col h4{color:#fff;font-size:14px;font-weight:700;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}.footer-col ul{list-style:none;line-height:1.9}.footer-col a{color:#cbd5e1;font-size:14px}.footer-col a:hover{color:#fff}
+    .footer-bottom{padding:24px var(--gutter);border-top:1px solid rgba(255,255,255,.08);font-size:13px;color:#cbd5e1}.footer-bottom .container{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media (max-width:1024px){.footer-grid{grid-template-columns:repeat(2,1fr);gap:24px}}
+    @media (max-width:640px){.footer-grid{grid-template-columns:1fr}.footer-top .container{flex-direction:column;align-items:flex-start}.footer-top h2{font-size:20px}.content-section{padding:60px var(--gutter)}.page-hero{padding:60px var(--gutter)}}
   </style>
 </head>
-
 <body>
 
-<!-- Header -->
 <header id="site_header">
   <div class="container">
     <div class="header-bar">
       <a href="index.html" class="logo" aria-label="NeuroEdge Chiropractic">
         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/neuroedge-logo-transparent-3y40nSK6tF8cnzVhFvy2wJtF9RsYcz.png" alt="NeuroEdge Chiropractic">
       </a>
-
       <nav id="nav" aria-label="Primary">
         <ul>
           <li><a href="about.html">Meet the Doctor</a></li>
@@ -167,7 +55,6 @@
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
       </nav>
-
       <div class="header-cta">
         <a href="tel:(951) 304-2242" class="btn btn-secondary">Call (951) 304-2242</a>
         <a href="index.html#contact" class="btn btn-primary">Schedule</a>
@@ -176,7 +63,6 @@
   </div>
 </header>
 
-<!-- Page Hero -->
 <section class="page-hero">
   <div class="container">
     <h1>SoftWave Therapy in Murrieta</h1>
@@ -185,11 +71,10 @@
   </div>
 </section>
 
-<!-- Content -->
 <section class="content-section">
   <div class="container">
     <h2>What to Expect from SoftWave® Therapy in Murrieta</h2>
-    
+
     <h3>What it is (in plain English):</h3>
     <p>SoftWave Therapy uses focused acoustic (sound) waves delivered through a handheld device to “wake up” your body's natural repair system. Those waves increase local blood flow, calm inflammation, and signal repair cells (including resident stem/repair cells) to get to work—so irritated tissues can recover faster without injections or downtime.</p>
 
@@ -210,25 +95,24 @@
 
     <h3>After your session:</h3>
     <p>Mild soreness for 24–48 hours is normal as tissues respond. We'll give you simple do's and don'ts and, when helpful, exercises to support healing between visits.</p>
-    
-    <p style="margin-top: 32px;"><strong>Ready to experience drug-free pain relief and faster recovery?</strong> <a href="index.html#contact">Request a SoftWave appointment today.</a></p>
 
-    <!-- Responsive MP4 video (served from /video) -->
-<div class="video-wrap">
-  <video
-    controls
-    playsinline
-    preload="metadata"
-    controlslist="nodownload"
-    aria-label="What is SoftWave Therapy?"
-    poster="/images/softwave-poster.jpg"  <!-- optional -->
-  >
-    <source src="/clinic-videos/whatissoftwavetherapy.mp4" type="video/mp4" />
-    Your browser doesn’t support HTML5 video.
-  </video>
-</div>
+    <p style="margin-top:32px;"><strong>Ready to experience drug-free pain relief and faster recovery?</strong> <a href="index.html#contact">Request a SoftWave appointment today.</a></p>
 
-    <h2 style="margin-top: 60px;">Common Spine & Nerve Conditions We Treat with SoftWave Tissue Regeneration Therapy</h2>
+    <!-- Video -->
+    <div class="video-wrap">
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        controlslist="nodownload"
+        aria-label="What is SoftWave Therapy?"
+      >
+        <source src="https://raw.githubusercontent.com/RubenMDC25/neuroedge/e0dc2240270ebfa383282a27e3d42e7823cc2f01/public/clinic-videos/whatissoftwavetherapy.mp4" type="video/mp4" />
+        Your browser doesn’t support HTML5 video.
+      </video>
+    </div>
+
+    <h2 style="margin-top:60px;">Common Spine & Nerve Conditions We Treat with SoftWave Tissue Regeneration Therapy</h2>
     <ul>
       <li>Lumbar and cervical disc herniations</li>
       <li>Sciatica and nerve root compression</li>
@@ -241,9 +125,9 @@
       <li>Post-surgical spinal and nerve pain</li>
     </ul>
 
-    <p style="margin-top: 24px; font-style: italic;">Whether you've tried chiropractic, physical therapy, injections, or pain medications without lasting relief, SoftWave may be the breakthrough you've been waiting for.</p>
+    <p style="margin-top:24px;font-style:italic;">Whether you've tried chiropractic, physical therapy, injections, or pain medications without lasting relief, SoftWave may be the breakthrough you've been waiting for.</p>
 
-    <h2 style="margin-top: 60px;">SoftWave Therapy for Athletes: Speeding Up Recovery and Reducing Downtime</h2>
+    <h2 style="margin-top:60px;">SoftWave Therapy for Athletes: Speeding Up Recovery and Reducing Downtime</h2>
     <p>Athletes constantly push their bodies to the limit, striving for peak performance and faster recovery after intense training or injury. However, repetitive stress and strain can lead to muscle soreness, inflammation, and tissue damage. Traditional recovery methods often take time—but innovative treatments like SoftWave therapy are transforming how athletes heal.</p>
     <p>At NeuroEdge Chiropractic, SoftWave Therapy offers a cutting-edge approach to accelerating recovery and restoring function. Whether you're dealing with chronic pain, sports injuries, or muscle fatigue, this non-invasive treatment helps your body heal naturally, getting you back to your game faster.</p>
 
@@ -289,13 +173,12 @@
     <p>For athletes, every day of downtime matters. SoftWave Therapy provides a safe, evidence-based solution to accelerate recovery, relieve pain, and enhance performance. By integrating it with chiropractic adjustments and spinal therapies, NeuroEdge Chiropractic helps athletes restore balance, strength, and function—without invasive procedures or extended recovery periods.</p>
     <p>Whether you're recovering from an injury or looking to optimize your physical performance, SoftWave Therapy can help your body heal smarter and faster.</p>
 
-    <div style="margin-top: 48px; text-align: center;">
-      <a href="index.html#contact" class="btn btn-primary" style="padding: 14px 28px; font-size: 16px;">Schedule an Appointment</a>
+    <div style="margin-top:48px;text-align:center;">
+      <a href="index.html#contact" class="btn btn-primary" style="padding:14px 28px;font-size:16px;">Schedule an Appointment</a>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <div class="footer-top">
     <div class="container">
