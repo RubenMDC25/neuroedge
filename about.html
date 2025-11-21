@@ -30,11 +30,7 @@
       --radius-lg: 16px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html, body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -44,392 +40,131 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-      height: auto;
-    }
+    img { max-width: 100%; display: block; height: auto; }
 
-    a {
-      color: var(--brand-blue);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
+    a { color: var(--brand-blue); text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: var(--brand-red); }
 
-    a:hover {
-      color: var(--brand-red);
-    }
+    h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.2; color: var(--text-primary); }
+    h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 800; }
+    h2 { font-size: clamp(24px, 4vw, 36px); font-weight: 800; }
+    h3 { font-size: clamp(18px, 3vw, 24px); font-weight: 700; }
+    p  { color: var(--text-secondary); line-height: 1.65; font-size: 16px; }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--text-primary);
-    }
-
-    h1 {
-      font-size: clamp(28px, 5vw, 48px);
-      font-weight: 800;
-    }
-
-    h2 {
-      font-size: clamp(24px, 4vw, 36px);
-      font-weight: 800;
-    }
-
-    h3 {
-      font-size: clamp(18px, 3vw, 24px);
-      font-weight: 700;
-    }
-
-    p {
-      color: var(--text-secondary);
-      line-height: 1.65;
-      font-size: 16px;
-    }
-
-    .container {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 var(--gutter);
-    }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 15px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: inherit;
+      display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px;
+      border-radius: 8px; font-weight: 600; font-size: 15px; border: 1px solid transparent;
+      cursor: pointer; transition: all 0.2s ease; font-family: inherit;
     }
-
-    .btn:active {
-      transform: translateY(1px);
-    }
-
-    .btn-primary {
-      background: var(--brand-blue);
-      color: white;
-      box-shadow: 0 2px 8px rgba(35, 87, 137, 0.15);
-    }
-
-    .btn-primary:hover {
-      background: #1a4166;
-      box-shadow: 0 4px 12px rgba(35, 87, 137, 0.25);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: var(--brand-white);
-      color: var(--brand-blue);
-      border-color: var(--brand-blue);
-    }
-
-    .btn-secondary:hover {
-      background: #f0f6fc;
-      transform: translateY(-2px);
-    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--brand-blue); color: white; box-shadow: 0 2px 8px rgba(35, 87, 137, 0.15); }
+    .btn-primary:hover { background: #1a4166; box-shadow: 0 4px 12px rgba(35, 87, 137, 0.25); transform: translateY(-2px); }
+    .btn-secondary { background: var(--brand-white); color: var(--brand-blue); border-color: var(--brand-blue); }
+    .btn-secondary:hover { background: #f0f6fc; transform: translateY(-2px); }
+    .btn-accent { background: var(--brand-red); color: white; box-shadow: 0 2px 8px rgba(193, 41, 46, 0.15); }
+    .btn-accent:hover { background: #a01f24; box-shadow: 0 4px 12px rgba(193, 41, 46, 0.25); transform: translateY(-2px); }
 
     /* Header */
     #site_header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(8px);
+      position: sticky; top: 0; z-index: 100; background: var(--surface);
+      border-bottom: 1px solid var(--border); backdrop-filter: blur(8px);
       background-color: rgba(255, 255, 255, 0.95);
     }
+    .header-bar { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 24px; padding: 0 24px; }
+    .logo { display: flex; align-items: center; flex-shrink: 0; }
+    .logo img { height: 64px; width: auto; transition: transform 0.2s ease; }
+    #nav ul { display: flex; list-style: none; gap: 24px; flex: 1; flex-wrap: nowrap; }
+    #nav a { font-size: 14px; font-weight: 500; color: var(--text-primary); position: relative; white-space: nowrap; }
+    #nav a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background: var(--brand-blue); transition: width .3s ease; }
+    #nav a:hover::after { width: 100%; }
+    .header-cta { display: flex; align-items: center; gap: 12px; }
 
-    .header-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 70px;
-      gap: 24px;
-      padding: 0 24px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .logo img {
-      height: 64px;
-      width: auto;
-      transition: transform 0.2s ease;
-    }
-
-    #nav ul {
-      display: flex;
-      list-style: none;
-      gap: 24px;
-      flex: 1;
-      flex-wrap: nowrap;
-    }
-
-    #nav a {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-primary);
-      position: relative;
-      white-space: nowrap;
-    }
-
-    #nav a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--brand-blue);
-      transition: width 0.3s ease;
-    }
-
-    #nav a:hover::after {
-      width: 100%;
-    }
-
-    .header-cta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    @media (max-width: 1024px) {
-      #nav ul {
-        gap: 16px;
-      }
-      #nav a {
-        font-size: 13px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header-bar {
-        height: 60px;
-        gap: 12px;
-      }
-      #nav ul {
-        display: none;
-      }
-      .header-cta {
-        flex-wrap: wrap;
-      }
+    @media (max-width:1024px){ #nav ul{gap:16px;} #nav a{font-size:13px;} }
+    @media (max-width:768px){
+      .header-bar{height:60px; gap:12px;}
+      #nav ul{display:none;}
+      .header-cta{flex-wrap:wrap;}
     }
 
     /* Page Hero */
     .page-hero {
       background: linear-gradient(135deg, var(--brand-blue) 0%, #1a4166 100%);
-      padding: 80px var(--gutter);
-      color: white;
-      text-align: center;
+      padding: 80px var(--gutter); color: white; text-align: center;
     }
+    .page-hero h1 { color: white; margin-bottom: 16px; }
+    .page-hero p  { color: rgba(255,255,255,.9); font-size: 18px; max-width: 700px; margin: 0 auto; }
 
-    .page-hero h1 {
-      color: white;
-      margin-bottom: 16px;
-    }
-
-    .page-hero p {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    /* Main Content */
-    .main-content {
-      padding: 80px var(--gutter);
-      background: var(--surface);
-    }
-
+    /* Dr. Carlson section */
+    .main-content { padding: 80px var(--gutter); background: var(--surface); }
     .content-grid {
-      display: grid;
-      grid-template-columns: 400px 1fr;
-      gap: 48px;
-      max-width: var(--maxw);
-      margin: 0 auto;
+      display: grid; grid-template-columns: 400px 1fr; gap: 48px; max-width: var(--maxw); margin: 0 auto;
     }
-
     .content-image {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      transition: transform 0.3s ease;
-      height: fit-content;
+      position: relative; border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-lg); transition: transform 0.3s ease; height: fit-content;
     }
-
-    .content-image:hover {
-      transform: scale(1.02);
-    }
-
-    .content-image img {
-      width: 100%;
-      height: auto;
-    }
-
-    .content-text h2 {
-      color: var(--brand-blue);
-      margin-bottom: 24px;
-    }
-
-    .content-text h3 {
-      color: var(--brand-blue);
-      margin-top: 32px;
-      margin-bottom: 16px;
-    }
-
-    .content-text p {
-      margin-bottom: 20px;
-    }
-
-    .content-text ul {
-      margin: 20px 0;
-      padding-left: 24px;
-      color: var(--text-secondary);
-    }
-
-    .content-text li {
-      margin-bottom: 12px;
-      line-height: 1.65;
-    }
+    .content-image:hover { transform: scale(1.02); }
+    .content-image img { width: 100%; height: auto; }
+    .content-text h2 { color: var(--brand-blue); margin-bottom: 24px; }
+    .content-text h3 { color: var(--brand-blue); margin-top: 32px; margin-bottom: 16px; }
+    .content-text p { margin-bottom: 20px; }
+    .content-text ul { margin: 20px 0; padding-left: 24px; color: var(--text-secondary); }
+    .content-text li { margin-bottom: 12px; line-height: 1.65; }
 
     @media (max-width: 900px) {
-      .content-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      .main-content {
-        padding: 60px var(--gutter);
-      }
+      .content-grid { grid-template-columns: 1fr; gap: 32px; }
+      .main-content { padding: 60px var(--gutter); }
+    }
+
+    /* Team section */
+    .team-section { padding: 20px var(--gutter) 80px; background: var(--surface); }
+    .team-header { max-width: var(--maxw); margin: 0 auto 24px; }
+    .team-header h2 { color: var(--brand-blue); }
+    .team-grid {
+      max-width: var(--maxw); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+    }
+    .team-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow);
+      display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: start;
+    }
+    .team-photo {
+      width: 120px; height: 120px; border-radius: 12px; overflow: hidden; background: #e5e7eb;
+      display:flex; align-items:center; justify-content:center; color:#64748b; font-weight:600;
+    }
+    .team-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .team-meta h3 { margin: 0; color: var(--text-primary); }
+    .team-role { color: var(--brand-blue); font-weight: 700; margin: 4px 0 12px; }
+    .team-bio { color: var(--text-secondary); }
+
+    @media (max-width: 900px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .team-card { grid-template-columns: 1fr; }
+      .team-photo { width: 100%; height: 220px; border-radius: var(--radius-md); }
     }
 
     /* Footer */
-    footer {
-      background: var(--brand-blue);
-      color: white;
-    }
+    footer { background: var(--brand-blue); color: white; }
+    .footer-top { padding: 40px var(--gutter); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+    .footer-top .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .footer-top h2 { color: white; font-size: 24px; margin: 0; flex: 1; }
+    .footer-mid { padding: 48px var(--gutter); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; max-width: var(--maxw); margin: 0 auto; }
+    .footer-col.logo-col { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .footer-col.logo-col img { height: 120px; width: auto; transition: transform 0.3s ease; }
+    .footer-col.logo-col img:hover { transform: scale(1.05); }
+    .footer-col h4 { color: white; font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .footer-col ul { list-style: none; line-height: 1.9; }
+    .footer-col a { color: #cbd5e1; font-size: 14px; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom { padding: 24px var(--gutter); border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 13px; color: #cbd5e1; }
+    .footer-bottom .container { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 
-    .footer-top {
-      padding: 40px var(--gutter);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .footer-top .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .footer-top h2 {
-      color: white;
-      font-size: 24px;
-      margin: 0;
-      flex: 1;
-    }
-
-    .btn-accent {
-      background: var(--brand-red);
-      color: white;
-      box-shadow: 0 2px 8px rgba(193, 41, 46, 0.15);
-    }
-
-    .btn-accent:hover {
-      background: #a01f24;
-      box-shadow: 0 4px 12px rgba(193, 41, 46, 0.25);
-      transform: translateY(-2px);
-    }
-
-    .footer-mid {
-      padding: 48px var(--gutter);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      max-width: var(--maxw);
-      margin: 0 auto;
-    }
-
-    .footer-col.logo-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer-col.logo-col img {
-      height: 120px;
-      width: auto;
-      transition: transform 0.3s ease;
-    }
-
-    .footer-col.logo-col img:hover {
-      transform: scale(1.05);
-    }
-
-    .footer-col h4 {
-      color: white;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .footer-col ul {
-      list-style: none;
-      line-height: 1.9;
-    }
-
-    .footer-col a {
-      color: #cbd5e1;
-      font-size: 14px;
-    }
-
-    .footer-col a:hover {
-      color: white;
-    }
-
-    .footer-bottom {
-      padding: 24px var(--gutter);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 13px;
-      color: #cbd5e1;
-    }
-
-    .footer-bottom .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 1024px) {
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    @media (max-width: 1024px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px)  { .footer-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 
@@ -465,12 +200,12 @@
 <!-- Page Hero -->
 <section class="page-hero">
   <div class="container">
-    <h1>Meet Dr. Marty Carlson</h1>
-    <p>Dedicated to neurological and structural care in Murrieta since 2001</p>
+    <h1>Meet Our Team</h1>
+    <p>Dedicated to Chiropractic Care in Murrieta since 2001</p>
   </div>
 </section>
 
-<!-- Main Content -->
+<!-- Main Content: Dr. Carlson -->
 <section class="main-content">
   <div class="content-grid">
     <div class="content-image">
@@ -502,6 +237,48 @@
         <a href="index.html#contact" class="btn btn-primary">Schedule an Appointment</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section" aria-labelledby="team-heading">
+  <div class="team-header container">
+    <h2 id="team-heading">Meet Our Team</h2>
+    <p class="sr-only">Our dedicated staff supporting patient care at NeuroEdge Chiropractic.</p>
+  </div>
+
+  <div class="team-grid">
+    <!-- Rebecca Ford -->
+    <article class="team-card">
+      <div class="team-photo" aria-hidden="true">
+        <!-- Replace with headshot when available -->
+        <!-- <img src="/images/team/rebecca-ford.jpg" alt="Rebecca Ford" /> -->
+        RF
+      </div>
+      <div class="team-meta">
+        <h3>Rebecca Ford</h3>
+        <div class="team-role">Office Manager</div>
+        <p class="team-bio">
+          Rebecca grew up in Orange County and moved out here 25 years ago. She loves staying active and spending time outdoors. She is happiest when she is with her family, especially when she is cheering on her daughter at her soccer games. She has been working as a Chiropractic Assistant for twenty nine years and she has been a part of the NeuroEdge Chiropractic team for the past twenty years. She is our office manager, and she is dedicated to helping our patients with any questions or concerns they may have. She takes pride in creating a welcoming, supportive environment for everyone she meets. Rebecca is here to help you achieve your health goals.
+        </p>
+      </div>
+    </article>
+
+    <!-- Arwen Frison -->
+    <article class="team-card">
+      <div class="team-photo" aria-hidden="true">
+        <!-- Replace with headshot when available -->
+        <!-- <img src="/images/team/arwen-frison.jpg" alt="Arwen Frison" /> -->
+        AF
+      </div>
+      <div class="team-meta">
+        <h3>Arwen Frison</h3>
+        <div class="team-role">Chiropractic Assistant</div>
+        <p class="team-bio">
+          I am a dedicated healthcare professional with 22 years of experience in the medical field. I take pride in providing compassionate, high-quality care and contributing to the wellbeing of the patients and communities I serve. I am from Canada, and my values are shaped by a strong sense of integrity, respect, and commitment. I am deeply devoted to my family, who remain at the center of my motivation and purpose. Outside of work, I am an enthusiastic Edmonton Oilers fan and enjoy watching their games whenever I can. I also love to travel, especially to tropical destinations where I can recharge, explore new cultures, and appreciate time away from my busy schedule.
+        </p>
+      </div>
+    </article>
   </div>
 </section>
 
