@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
 
   <style>
-:root {
+    :root {
       --brand-blue: #235789;
       --brand-red: #c1292e;
       --brand-white: #ffffff;
@@ -66,6 +66,19 @@
     .btn-accent { background: var(--brand-red); color: white; box-shadow: 0 2px 8px rgba(193, 41, 46, 0.15); }
     .btn-accent:hover { background: #a01f24; box-shadow: 0 4px 12px rgba(193, 41, 46, 0.25); transform: translateY(-2px); }
 
+    /* Screen-reader only helper */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
     /* Header */
     #site_header {
       position: sticky; top: 0; z-index: 100; background: var(--surface);
@@ -81,7 +94,10 @@
     #nav a:hover::after { width: 100%; }
     .header-cta { display: flex; align-items: center; gap: 12px; }
 
-    @media (max-width:1024px){ #nav ul{gap:16px;} #nav a{font-size:13px;} }
+    @media (max-width:1024px){
+      #nav ul{gap:16px;}
+      #nav a{font-size:13px;}
+    }
     @media (max-width:768px){
       .header-bar{height:60px; gap:12px;}
       #nav ul{display:none;}
@@ -118,32 +134,81 @@
       .main-content { padding: 60px var(--gutter); }
     }
 
-    /* Team section */
-    .team-section { padding: 20px var(--gutter) 80px; background: var(--surface); }
-    .team-header { max-width: var(--maxw); margin: 0 auto 24px; }
-    .team-header h2 { color: var(--brand-blue); }
-    .team-grid {
-      max-width: var(--maxw); margin: 0 auto;
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+    /* Team section (updated) */
+    .team-section {
+      padding: 40px var(--gutter) 80px;
+      background: var(--surface);
     }
-    .team-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow);
-      display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: start;
-    }
-    .team-photo {
-      width: 120px; height: 120px; border-radius: 12px; overflow: hidden; background: #e5e7eb;
-      display:flex; align-items:center; justify-content:center; color:#64748b; font-weight:600;
-    }
-    .team-photo img { width: 100%; height: 100%; object-fit: cover; }
-    .team-meta h3 { margin: 0; color: var(--text-primary); }
-    .team-role { color: var(--brand-blue); font-weight: 700; margin: 4px 0 12px; }
-    .team-bio { color: var(--text-secondary); }
 
-    @media (max-width: 900px) {
-      .team-grid { grid-template-columns: 1fr; }
-      .team-card { grid-template-columns: 1fr; }
-      .team-photo { width: 100%; height: 220px; border-radius: var(--radius-md); }
+    .team-header {
+      max-width: var(--maxw);
+      margin: 0 auto 32px;
+    }
+
+    .team-header h2 {
+      color: var(--brand-blue);
+      margin-bottom: 4px;
+    }
+
+    .team-grid {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .team-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-photo {
+      width: 100%;
+      height: 260px;
+      background: #e5e7eb;
+      overflow: hidden;
+    }
+
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-meta {
+      padding: 24px;
+    }
+
+    .team-meta h3 {
+      margin: 0;
+      color: var(--text-primary);
+    }
+
+    .team-role {
+      color: var(--brand-blue);
+      font-weight: 700;
+      margin: 6px 0 14px;
+    }
+
+    .team-bio {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 640px) {
+      .team-section {
+        padding: 32px var(--gutter) 64px;
+      }
+      .team-meta {
+        padding: 20px;
+      }
     }
 
     /* Footer */
@@ -209,6 +274,7 @@
 <section class="main-content">
   <div class="content-grid">
     <div class="content-image">
+      <!-- Dr. Carlson image link unchanged -->
       <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/picture%20of%20Ana%20and%20me%20website%20marty-udwdL6SeIg0bdGB11HJ7aNSEFplJJ7.jpg" alt="Dr. Marty Carlson and Ana">
     </div>
     <div class="content-text">
@@ -250,8 +316,9 @@
   <div class="team-grid">
     <!-- Rebecca Ford -->
     <article class="team-card">
-      <div class="team-photo" aria-hidden="true">
-         <img src="https://github.com/RubenMDC25/neuroedge/blob/c381c5126bc8cd51c8afc00e6eb2ee2e4343e141/images/IMG_3652.jpg" alt="Rebecca Ford">
+      <div class="team-photo">
+        <!-- Use relative path to your images folder -->
+        <img src="images/IMG_3652.jpg" alt="Rebecca Ford with her family">
       </div>
       <div class="team-meta">
         <h3>Rebecca Ford</h3>
@@ -264,8 +331,8 @@
 
     <!-- Arwen Frison -->
     <article class="team-card">
-      <div class="team-photo" aria-hidden="true">
-         <img src="https://github.com/RubenMDC25/neuroedge/blob/c381c5126bc8cd51c8afc00e6eb2ee2e4343e141/images/IMG_3653.jpg" alt="Arwen Firson">
+      <div class="team-photo">
+        <img src="images/IMG_3653.jpg" alt="Arwen Frison with her family">
       </div>
       <div class="team-meta">
         <h3>Arwen Frison</h3>
